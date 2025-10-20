@@ -1,0 +1,16 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.jiuqi.bde.common.annotation.ComponentStandaloneScan
+ */
+package com.jiuqi.bde.floatmodel.impl;
+
+import com.jiuqi.bde.common.annotation.ComponentStandaloneScan;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ComponentStandaloneScan(basePackages={"com.jiuqi.bde.floatmodel.impl"})
+public class BdeFloatModelImplAutoConfiguration {
+}
+

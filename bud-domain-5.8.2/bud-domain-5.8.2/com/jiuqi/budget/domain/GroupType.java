@@ -1,0 +1,42 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.budget.domain;
+
+public enum GroupType {
+    DIMENSION,
+    MEASUREMENT,
+    HYPERMODEL,
+    TABLE_GROUP,
+    HYPERVIEW,
+    FORMULA,
+    REL,
+    BUDTASK,
+    FUNCTIONPARAM,
+    DATAPUSHSCHEME,
+    CTRLPOLICY,
+    NOTICE,
+    CALSCHEME,
+    BUDINTERFACEDATAPUSH,
+    ADJUSTPOLICY,
+    BUDINTERFACEDATAPULL,
+    EXECMONITORSCHEME,
+    EXECMONITORSUBSCRIBE,
+    APPROVALTEMPLATE,
+    GMTTEMPLATE,
+    CTRLOBJ,
+    DOCDEFINE,
+    TASKARRANGE,
+    PREDICTSCHEME,
+    BUDEVALZBGROUP,
+    BUDSELFGATHERTASK,
+    TARGETCALCSCHEME,
+    CTRLOUTERCONFIG,
+    FLOWPROCESS;
+
+
+    public String toString() {
+        return super.toString().intern();
+    }
+}
+

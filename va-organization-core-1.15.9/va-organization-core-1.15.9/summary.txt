@@ -1,0 +1,9 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\va-organization-core-1.15.9.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.va.organization.common.OrgDataKryoSerializer
+----------------------------
+
+serialize(com.jiuqi.va.domain.org.OrgCacheDO )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once

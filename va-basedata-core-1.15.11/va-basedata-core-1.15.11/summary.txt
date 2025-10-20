@@ -1,0 +1,16 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\va-basedata-core-1.15.11.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.va.basedata.common.BaseDataKryoSerializer
+----------------------------
+
+serialize(com.jiuqi.va.domain.basedata.BaseDataCacheDO )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.va.basedata.service.impl.help.BaseDataCacheService
+----------------------------
+
+syncCache(com.jiuqi.va.domain.basedata.BaseDataDO boolean )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [3[TRYBLOCK]], but top level block is 17[WHILELOOP]

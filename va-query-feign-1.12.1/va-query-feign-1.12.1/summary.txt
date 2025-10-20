@@ -1,0 +1,9 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\va-query-feign-1.12.1.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.va.query.sql.formula.DateParser
+----------------------------
+
+daysToDNADate(int )
+  Unable to fully structure code

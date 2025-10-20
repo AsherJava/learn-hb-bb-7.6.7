@@ -1,0 +1,25 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.jiuqi.bi.syntax.ast.IASTNode
+ *  com.jiuqi.bi.syntax.parser.IContext
+ */
+package com.jiuqi.va.formula.tofilter;
+
+import com.jiuqi.bi.syntax.ast.IASTNode;
+import com.jiuqi.bi.syntax.parser.IContext;
+import com.jiuqi.va.formula.common.exception.ToFilterException;
+import com.jiuqi.va.formula.intf.ToFilter;
+import com.jiuqi.va.formula.provider.FilterNodeProvider;
+
+public class ExpressionNodeToFilter
+implements ToFilter {
+    @Override
+    public void toFilter(IContext context, IASTNode node, StringBuilder buffer, Object info) throws ToFilterException {
+        IASTNode formulaNode = node.getChild(0);
+        ToFilter toFilter = FilterNodeProvider.get(formulaNode.getNodeType());
+        toFilter.toFilter(context, formulaNode, buffer, info);
+    }
+}
+

@@ -1,0 +1,20 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.jiuqi.bde.common.constant.ComputationModelEnum
+ */
+package com.jiuqi.bde.plugin.cloud_acca.penetrate.detailledger;
+
+import com.jiuqi.bde.common.constant.ComputationModelEnum;
+import com.jiuqi.bde.plugin.cloud_acca.penetrate.detailledger.AbstractBdeCloudAccaDetailLedgerContentProvider;
+import org.springframework.stereotype.Component;
+
+@Component
+public class BdeCloudAccaDetailLedgerContentProvider
+extends AbstractBdeCloudAccaDetailLedgerContentProvider {
+    public String getBizModel() {
+        return ComputationModelEnum.BALANCE.getCode();
+    }
+}
+

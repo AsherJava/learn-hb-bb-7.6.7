@@ -1,0 +1,37 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\va-attachment-core-2.14.1.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.va.attachment.service.impl.handle.AttachmentServerHandleIntfImpl
+----------------------------
+
+getFile(com.jiuqi.va.attachment.domain.AttachmentBizDTO )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.va.attachment.service.impl.handle.AttachmentSftpHandleIntfImpl
+----------------------------
+
+copyFile(com.jiuqi.va.attachment.domain.AttachmentBizDTO com.jiuqi.va.attachment.domain.SchemeEntity java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+
+
+com.jiuqi.va.attachment.service.impl.handle.AttachmentOssHandleIntfImpl
+----------------------------
+
+getFile(com.jiuqi.va.attachment.domain.AttachmentBizDTO )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.va.attachment.service.impl.handle.AttachmentDefultHandleIntfImpl
+----------------------------
+
+getFile(com.jiuqi.va.attachment.domain.AttachmentBizDTO )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.va.attachment.utils.VaAttachmentIOUtils
+----------------------------
+
+decompress(byte[] )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
