@@ -1,0 +1,16 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nvwa-server-framework-core-2.0.4.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nvwa.sf.adapter.spring.hmac.HmacSerializeUtil
+----------------------------
+
+deserialize(byte[] )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+
+
+com.jiuqi.nvwa.sf.operator.VersionOperator
+----------------------------
+
+existLegacyVersion(java.sql.Connection java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once

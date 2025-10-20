@@ -1,0 +1,48 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\oss-engine-3.9.0.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.bi.oss.storage.DBMetaAdapter
+----------------------------
+
+getBucket(java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 4 blocks at once
+isBucketLocked(java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 4 blocks at once
+listBucket()
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+getObjectInfo(java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+_getObjectExtInfo(java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+_getObjectExtPropSize(java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 4 blocks at once
+findObjectStoreKeyByObjKey(java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+_listObjectExtKeys(java.lang.String int int )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+batchDeleteObjectLink(java.lang.String java.util.List<java.lang.String> )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+getObjectLinkTag(java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+deleteObjectLink(java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+getDeadObjectLinks()
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 5 blocks at once
+getExpireObjectKeys(java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+
+
+com.jiuqi.bi.oss.storage.db.DBStorage
+----------------------------
+
+deleteBucket(java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 4 blocks at once
+upload(java.lang.String java.lang.String java.io.InputStream com.jiuqi.bi.oss.ObjectInfo )
+  Loose catch block
+download(java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+existObject(java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 5 blocks at once
+deleteObject(java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
