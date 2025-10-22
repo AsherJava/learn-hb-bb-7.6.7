@@ -1,0 +1,150 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.jiuqi.np.common.exception.ErrorEnum
+ */
+package com.jiuqi.nr.definition.exception;
+
+import com.jiuqi.np.common.exception.ErrorEnum;
+
+public enum NrDefinitionErrorEnum2 implements ErrorEnum
+{
+    TASK_INSERT("000", "\u65b0\u589e\u4efb\u52a1\u5931\u8d25\uff01"),
+    TASK_UPDATE("001", "\u66f4\u65b0\u4efb\u52a1\u5931\u8d25\uff01"),
+    TASK_DELETE("002", "\u5220\u9664\u4efb\u52a1\u5931\u8d25\uff01"),
+    TASK_QUERY("003", "\u67e5\u8be2\u4efb\u52a1\u5931\u8d25\uff01"),
+    TASK_FLOWS_UPDATE("004", "\u65b0\u589e\u6216\u66f4\u65b0\u4efb\u52a1\u6d41\u7a0b\u5931\u8d25\uff01"),
+    TASK_FLOWS_DELETE("005", "\u5220\u9664\u4efb\u52a1\u6d41\u7a0b\u5931\u8d25\uff01"),
+    TASK_FLOWS_QUERY("006", "\u67e5\u8be2\u4efb\u52a1\u6d41\u7a0b\u5931\u8d25\uff01"),
+    TASK_GROUP_INSERT("100", "\u65b0\u589e\u4efb\u52a1\u5206\u7ec4\u5931\u8d25\uff01"),
+    TASK_GROUP_UPDATE("101", "\u66f4\u65b0\u4efb\u52a1\u5206\u7ec4\u5931\u8d25\uff01"),
+    TASK_GROUP_DELETE("102", "\u5220\u9664\u4efb\u52a1\u5206\u7ec4\u5931\u8d25\uff01"),
+    TASK_GROUP_QUERY("103", "\u67e5\u8be2\u4efb\u52a1\u5206\u7ec4\u5931\u8d25\uff01"),
+    FORMSCHEME_INSERT("200", "\u65b0\u589e\u62a5\u8868\u65b9\u6848\u5931\u8d25\uff01"),
+    FORMSCHEME_UPDATE("201", "\u66f4\u65b0\u62a5\u8868\u65b9\u6848\u5931\u8d25\uff01"),
+    FORMSCHEME_DELETE("202", "\u5220\u9664\u62a5\u8868\u65b9\u6848\u5931\u8d25\uff01"),
+    FORMSCHEME_QUERY("203", "\u67e5\u8be2\u62a5\u8868\u65b9\u6848\u5931\u8d25\uff01"),
+    ANALYSIS_QUERY("210", "\u67e5\u8be2\u5206\u6790\u65b9\u6848\u5931\u8d25\uff01"),
+    ANALYSIS_UPDATE("211", "\u66f4\u65b0\u5206\u6790\u65b9\u6848\u5931\u8d25\uff01"),
+    ANALYSIS_DELETE("212", "\u5220\u9664\u5206\u6790\u65b9\u6848\u5931\u8d25\uff01"),
+    SCHEME_EFFECTIVE_INSERT("300", "\u65b0\u589e\u62a5\u8868\u65b9\u6848\u5931\u8d25\uff01"),
+    SCHEME_EFFECTIVE_UPDATE("301", "\u66f4\u65b0\u62a5\u8868\u65b9\u6848\u5931\u8d25\uff01"),
+    SCHEME_EFFECTIVE_DELETE("302", "\u5220\u9664\u62a5\u8868\u65b9\u6848\u5931\u8d25\uff01"),
+    SCHEME_EFFECTIVE_QUERY("303", "\u67e5\u8be2\u62a5\u8868\u65b9\u6848\u5931\u8d25\uff01"),
+    FORM_GROUP_INSERT("400", "\u65b0\u589e\u62a5\u8868\u5206\u7ec4\u5931\u8d25\uff01"),
+    FORM_GROUP_UPDATE("401", "\u66f4\u65b0\u62a5\u8868\u5206\u7ec4\u5931\u8d25\uff01"),
+    FORM_GROUP_DELETE("402", "\u5220\u9664\u62a5\u8868\u5206\u7ec4\u5931\u8d25\uff01"),
+    FORM_GROUP_QUERY("403", "\u67e5\u8be2\u62a5\u8868\u5206\u7ec4\u5931\u8d25\uff01"),
+    FORM_INSERT("500", "\u65b0\u589e\u62a5\u8868\u5931\u8d25\uff01"),
+    FORM_UPDATE("501", "\u66f4\u65b0\u62a5\u8868\u5931\u8d25\uff01"),
+    FORM_DELETE("502", "\u5220\u9664\u62a5\u8868\u5931\u8d25\uff01"),
+    FORM_QUERY("503", "\u67e5\u8be2\u62a5\u8868\u5931\u8d25\uff01"),
+    FORM_FILLINGGUIDE_INSERT("504", "\u65b0\u589e\u62a5\u8868\u586b\u62a5\u8bf4\u660e\u5931\u8d25\uff01"),
+    FORM_FILLINGGUIDE_UPDATE("505", "\u66f4\u65b0\u62a5\u8868\u586b\u62a5\u8bf4\u660e\u5931\u8d25\uff01"),
+    FORM_FILLINGGUIDE_DELETE("506", "\u5220\u9664\u62a5\u8868\u586b\u62a5\u8bf4\u660e\u5931\u8d25\uff01"),
+    FORM_FORMSTYLE_INSERT("507", "\u65b0\u589e\u62a5\u8868\u8868\u6837\u5931\u8d25\uff01"),
+    FORM_FORMSTYLE_UPDATE("508", "\u66f4\u65b0\u62a5\u8868\u8868\u6837\u5931\u8d25\uff01"),
+    FORM_FORMSTYLE_DELETE("509", "\u5220\u9664\u62a5\u8868\u8868\u6837\u5931\u8d25\uff01"),
+    FORM_FORMSTYLE_QUERY("516", "\u67e5\u8be2\u62a5\u8868\u8868\u6837\u5931\u8d25\uff01"),
+    FORM_SCRIPT_INSERT("510", "\u65b0\u589e\u62a5\u8868\u524d\u7aef\u811a\u672c\u5931\u8d25\uff01"),
+    FORM_SCRIPT_UPDATE("511", "\u66f4\u65b0\u62a5\u8868\u524d\u7aef\u811a\u672c\u5931\u8d25\uff01"),
+    FORM_SCRIPT_DELETE("512", "\u5220\u9664\u62a5\u8868\u524d\u7aef\u811a\u672c\u5931\u8d25\uff01"),
+    FORM_SURVEY_INSERT("513", "\u65b0\u589e\u62a5\u8868\u95ee\u5377\u5931\u8d25\uff01"),
+    FORM_SURVEY_UPDATE("514", "\u66f4\u65b0\u62a5\u8868\u95ee\u5377\u5931\u8d25\uff01"),
+    FORM_SURVEY_DELETE("515", "\u5220\u9664\u62a5\u8868\u95ee\u5377\u5931\u8d25\uff01"),
+    FORM_ANALYSIS_INSERT("516", "\u65b0\u589e\u62a5\u8868\u5206\u6790\u8868\u5931\u8d25\uff01"),
+    FORM_ANALYSIS_UPDATE("517", "\u66f4\u65b0\u62a5\u8868\u5206\u6790\u8868\u5931\u8d25\uff01"),
+    FORM_ANALYSIS_DELETE("518", "\u5220\u9664\u62a5\u8868\u5206\u6790\u8868\u5931\u8d25\uff01"),
+    FORM_ANALYSIS_QUERY("519", "\u67e5\u8be2\u62a5\u8868\u5206\u6790\u8868\u5931\u8d25\uff01"),
+    DATA_REGION_INSERT("600", "\u65b0\u589e\u6570\u636e\u533a\u57df\u5931\u8d25\uff01"),
+    DATA_REGION_UPDATE("601", "\u66f4\u65b0\u6570\u636e\u533a\u57df\u5931\u8d25\uff01"),
+    DATA_REGION_DELETE("602", "\u5220\u9664\u6570\u636e\u533a\u57df\u5931\u8d25\uff01"),
+    DATA_REGION_QUERY("603", "\u67e5\u8be2\u6570\u636e\u533a\u57df\u5931\u8d25\uff01"),
+    DATA_REGION_SETTING_INSERT("600", "\u65b0\u589e\u6570\u636e\u533a\u57df\u6269\u5c55\u5c5e\u6027\u5931\u8d25\uff01"),
+    DATA_REGION_SETTING_UPDATE("601", "\u66f4\u65b0\u6570\u636e\u533a\u57df\u6269\u5c55\u5c5e\u6027\u5931\u8d25\uff01"),
+    DATA_REGION_SETTING_DELETE("602", "\u5220\u9664\u6570\u636e\u533a\u57df\u6269\u5c55\u5c5e\u6027\u5931\u8d25\uff01"),
+    DATA_REGION_SETTING_QUERY("603", "\u67e5\u8be2\u6570\u636e\u533a\u57df\u6269\u5c55\u5c5e\u6027\u5931\u8d25\uff01"),
+    DATA_LINK_INSERT("700", "\u65b0\u589e\u6570\u636e\u94fe\u63a5\u5931\u8d25\uff01"),
+    DATA_LINK_UPDATE("701", "\u66f4\u65b0\u6570\u636e\u94fe\u63a5\u5931\u8d25\uff01"),
+    DATA_LINK_DELETE("702", "\u5220\u9664\u6570\u636e\u94fe\u63a5\u5931\u8d25\uff01"),
+    DATA_LINK_QUERY("703", "\u67e5\u8be2\u6570\u636e\u94fe\u63a5\u5931\u8d25\uff01"),
+    DATA_LINK_ATTACHMENT_INSERT("704", "\u65b0\u589e\u6570\u636e\u94fe\u63a5\u9644\u4ef6\u4fe1\u606f\u5931\u8d25\uff01"),
+    DATA_LINK_ATTACHMENT_UPDATE("705", "\u66f4\u65b0\u6570\u636e\u94fe\u63a5\u9644\u4ef6\u4fe1\u606f\u5931\u8d25\uff01"),
+    DATA_LINK_ATTACHMENT_DELETE("706", "\u5220\u9664\u6570\u636e\u94fe\u63a5\u9644\u4ef6\u4fe1\u606f\u5931\u8d25\uff01"),
+    DATA_LINK_ATTACHMENT_QUERY("707", "\u67e5\u8be2\u6570\u636e\u94fe\u63a5\u9644\u4ef6\u4fe1\u606f\u5931\u8d25\uff01"),
+    PRINT_SCHEME_INSERT("800", "\u65b0\u589e\u6253\u5370\u65b9\u6848\u5931\u8d25\uff01"),
+    PRINT_SCHEME_UPDATE("801", "\u66f4\u65b0\u6253\u5370\u65b9\u6848\u5931\u8d25\uff01"),
+    PRINT_SCHEME_DELETE("802", "\u5220\u9664\u6253\u5370\u65b9\u6848\u5931\u8d25\uff01"),
+    PRINT_SCHEME_QUERY("803", "\u67e5\u8be2\u6253\u5370\u65b9\u6848\u5931\u8d25\uff01"),
+    PRINT_TEMPLATE_INSERT("900", "\u65b0\u589e\u6253\u5370\u6a21\u677f\u5931\u8d25\uff01"),
+    PRINT_TEMPLATE_UPDATE("901", "\u66f4\u65b0\u6253\u5370\u6a21\u677f\u5931\u8d25\uff01"),
+    PRINT_TEMPLATE_DELETE("902", "\u5220\u9664\u6253\u5370\u6a21\u677f\u5931\u8d25\uff01"),
+    PRINT_TEMPLATE_QUERY("903", "\u67e5\u8be2\u6253\u5370\u6a21\u677f\u5931\u8d25\uff01"),
+    FORMULA_SCHEME_DELETE("1000", "\u5220\u9664\u516c\u5f0f\u65b9\u6848\u5931\u8d25\uff01"),
+    FORMULA_SCHEME_QUERY("1001", "\u67e5\u8be2\u516c\u5f0f\u65b9\u6848\u5931\u8d25\uff01"),
+    FORMULA_SCHEME_INSERT("1002", "\u65b0\u589e\u516c\u5f0f\u65b9\u6848\u5931\u8d25\uff01"),
+    FORMULA_SCHEME_UPDATE("1003", "\u66f4\u65b0\u516c\u5f0f\u65b9\u6848\u5931\u8d25\uff01"),
+    FORMULA_DELETE("1100", "\u5220\u9664\u516c\u5f0f\u5931\u8d25\uff01"),
+    FORMULA_QUERY("1101", "\u67e5\u8be2\u516c\u5f0f\u5931\u8d25\uff01"),
+    FORMULA_INSERT("1102", "\u65b0\u589e\u516c\u5f0f\u5931\u8d25\uff01"),
+    FORMULA_UPDATE("1103", "\u66f4\u65b0\u516c\u5f0f\u5931\u8d25\uff01"),
+    FORMULA_VARI_DELETE("1200", "\u5220\u9664\u516c\u5f0f\u53d8\u91cf\u5931\u8d25\uff01"),
+    FORMULA_VARI_QUERY("1201", "\u67e5\u8be2\u516c\u5f0f\u53d8\u91cf\u5931\u8d25\uff01"),
+    FORMULA_VARI_INSERT("1202", "\u65b0\u589e\u516c\u5f0f\u53d8\u91cf\u5931\u8d25\uff01"),
+    FORMULA_VARI_UPDATE("1203", "\u66f4\u65b0\u516c\u5f0f\u53d8\u91cf\u5931\u8d25\uff01"),
+    TASK_GROUP_LINK_DELETE("1400", "\u5220\u9664\u4efb\u52a1\u5206\u7ec4\u5173\u8054\u5173\u7cfb\u5931\u8d25\uff01"),
+    TASK_GROUP_LINK_QUERY("1401", "\u67e5\u8be2\u4efb\u52a1\u5206\u7ec4\u5173\u8054\u5173\u7cfb\u5931\u8d25\uff01"),
+    TASK_GROUP_LINK_INSERT("1402", "\u65b0\u589e\u4efb\u52a1\u5206\u7ec4\u5173\u8054\u5173\u7cfb\u5931\u8d25\uff01"),
+    TASK_GROUP_LINK_UPDATE("1403", "\u66f4\u65b0\u4efb\u52a1\u5206\u7ec4\u5173\u8054\u5173\u7cfb\u5931\u8d25\uff01"),
+    FORM_GROUP_LINK_INSERT("1600", "\u65b0\u589e\u8868\u5355\u5206\u7ec4\u5173\u8054\u5931\u8d25\uff01"),
+    FORM_GROUP_LINK_UPDATE("1601", "\u66f4\u65b0\u8868\u5355\u5206\u7ec4\u5173\u8054\u5931\u8d25\uff01"),
+    FORM_GROUP_LINK_DELETE("1602", "\u5220\u9664\u8868\u5355\u5206\u7ec4\u5173\u8054\u5931\u8d25\uff01"),
+    FORM_GROUP_LINK_QUERY("1603", "\u67e5\u8be2\u8868\u5355\u5206\u7ec4\u5173\u8054\u5931\u8d25\uff01"),
+    TASK_LINK_DELETE("1700", "\u5220\u9664\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    TASK_LINK_QUERY("1701", "\u67e5\u8be2\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    TASK_LINK_INSERT("1702", "\u65b0\u589e\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    TASK_LINK_UPDATE("1703", "\u66f4\u65b0\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    DIMEN_FILTER_DELETE("1800", "\u5220\u9664\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    DIMEN_FILTER_QUERY("1801", "\u67e5\u8be2\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    DIMEN_FILTER_INSERT("1802", "\u65b0\u589e\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    DIMEN_FILTER_UPDATE("1803", "\u66f4\u65b0\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    DATA_LINK_MAPP_DELETE("1800", "\u5220\u9664\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    DATA_LINK_MAPP_QUERY("1801", "\u67e5\u8be2\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    DATA_LINK_MAPP_INSERT("1802", "\u65b0\u589e\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    DATA_LINK_MAPP_UPDATE("1803", "\u66f4\u65b0\u5173\u8054\u4efb\u52a1\u5931\u8d25\uff01"),
+    REPORT_DELETE("2000", "\u5220\u9664\u62a5\u544a\u5931\u8d25\uff01"),
+    REPORT_QUERY("2001", "\u67e5\u8be2\u62a5\u544a\u5931\u8d25\uff01"),
+    REPORT_INSERT("2002", "\u65b0\u589e\u62a5\u544a\u5931\u8d25\uff01"),
+    REPORT_UPDATE("2003", "\u66f4\u65b0\u62a5\u544a\u5931\u8d25\uff01"),
+    REPORT_IMPORT("2004", "\u62a5\u544a\u5bfc\u5165\u5931\u8d25\uff01"),
+    REPORT_EXPORT("2005", "\u62a5\u544a\u5bfc\u51fa\u5931\u8d25\uff01"),
+    REPORT_TAG_DELETE("2100", "\u5220\u9664\u62a5\u544a\u5931\u8d25\uff01"),
+    REPORT_TAG_QUERY("2101", "\u67e5\u8be2\u62a5\u544a\u5931\u8d25\uff01"),
+    REPORT_TAG_INSERT("2102", "\u65b0\u589e\u62a5\u544a\u5931\u8d25\uff01"),
+    REPORT_TAG_UPDATE("2103", "\u66f4\u65b0\u62a5\u544a\u5931\u8d25\uff01"),
+    PUBLISH_ERROR("2201", "\u53c2\u6570\u53d1\u5e03\u5931\u8d25\uff01"),
+    FORM_FOLDING_INSERT("2301", "\u62a5\u8868\u6298\u53e0\u6dfb\u52a0\u5931\u8d25"),
+    FORM_FOLDING_DELETE("2302", "\u62a5\u8868\u6298\u53e0\u5220\u9664\u5931\u8d25"),
+    TASK_ORG_LINK_INSERT("2310", "\u4efb\u52a1-\u5b9e\u4f53\u94fe\u63a5\u65b0\u589e\u5931\u8d25"),
+    TASK_ORG_LINK_DELETE("2311", "\u4efb\u52a1-\u5b9e\u4f53\u94fe\u63a5\u5220\u9664\u5931\u8d25"),
+    TASK_ORG_LINK_UPDATE("2312", "\u4efb\u52a1-\u5b9e\u4f53\u94fe\u63a5\u66f4\u65b0\u5931\u8d25"),
+    TASK_ORG_LINK_QUERY("2313", "\u4efb\u52a1-\u5b9e\u4f53\u94fe\u63a5\u67e5\u8be2\u5931\u8d25");
+
+    private String code;
+    private String message;
+
+    public String getCode() {
+        return this.code;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    private NrDefinitionErrorEnum2(String code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+}
+

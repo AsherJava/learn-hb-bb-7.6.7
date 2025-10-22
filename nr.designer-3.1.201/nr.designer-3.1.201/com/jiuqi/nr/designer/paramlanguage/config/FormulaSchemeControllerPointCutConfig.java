@@ -1,0 +1,23 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.nr.designer.paramlanguage.config;
+
+import com.jiuqi.nr.designer.paramlanguage.aop.FormulaSchemeControllerPointCut;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+@Configuration
+@EnableAspectJAutoProxy
+@ConditionalOnProperty(value={"paramlanguage.open"}, havingValue="true")
+@ComponentScan
+public class FormulaSchemeControllerPointCutConfig {
+    @Bean
+    public FormulaSchemeControllerPointCut getFormulaSchemeControllerPointCut() {
+        return new FormulaSchemeControllerPointCut();
+    }
+}
+
