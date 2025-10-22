@@ -1,9 +1,0 @@
-Summary for E:\久其办公\临时文件\gc\源码学习\outlib\gcreport-bde-fetchsetting-impl-7.6.7.jar
-Decompiled with CFR 0.152
-
-
-com.jiuqi.gcreport.bde.fetchsetting.impl.dao.impl.FetchSchemeDaoImpl
-----------------------------
-
-selectByFormSchemesAndName(java.util.List<java.lang.String> java.util.Optional<java.lang.String> )
-  Exception : java.lang.UnsupportedOperationException
