@@ -1,0 +1,154 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.jiuqi.common.base.util.CollectionUtils
+ *  com.jiuqi.common.base.util.JsonUtils
+ *  com.jiuqi.common.expimp.dataexport.common.ExportContext
+ *  com.jiuqi.common.expimp.dataexport.excel.common.ExportExcelSheet
+ *  com.jiuqi.common.expimp.dataexport.excel.executor.AbstractExportExcelMultiSheetExecutor
+ *  com.jiuqi.gcreport.investworkpaper.vo.QueryCondition
+ *  com.jiuqi.gcreport.offsetitem.executor.tab.task.OffsetTabExportTask
+ *  com.jiuqi.gcreport.offsetitem.vo.Pagination
+ *  com.jiuqi.gcreport.offsetitem.vo.QueryParamsVO
+ *  com.jiuqi.gcreport.unionrule.dto.AbstractUnionRule
+ */
+package com.jiuqi.gcreport.invest.investworkpaper.service.impl;
+
+import com.jiuqi.common.base.util.CollectionUtils;
+import com.jiuqi.common.base.util.JsonUtils;
+import com.jiuqi.common.expimp.dataexport.common.ExportContext;
+import com.jiuqi.common.expimp.dataexport.excel.common.ExportExcelSheet;
+import com.jiuqi.common.expimp.dataexport.excel.executor.AbstractExportExcelMultiSheetExecutor;
+import com.jiuqi.gcreport.invest.investworkpaper.investworkpaperfactory.GcInvestWorkPaperQueryFactory;
+import com.jiuqi.gcreport.invest.investworkpaper.service.WorkPaperQueryTaskService;
+import com.jiuqi.gcreport.invest.investworkpaper.service.impl.GcDirectInvestWorkPaperQueryTask;
+import com.jiuqi.gcreport.investworkpaper.vo.QueryCondition;
+import com.jiuqi.gcreport.offsetitem.executor.tab.task.OffsetTabExportTask;
+import com.jiuqi.gcreport.offsetitem.vo.Pagination;
+import com.jiuqi.gcreport.offsetitem.vo.QueryParamsVO;
+import com.jiuqi.gcreport.unionrule.dto.AbstractUnionRule;
+import java.awt.Color;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import org.apache.poi.hssf.usermodel.HSSFDataFormat;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.FillPatternType;
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.DefaultIndexedColorMap;
+import org.apache.poi.xssf.usermodel.IndexedColorMap;
+import org.apache.poi.xssf.usermodel.XSSFCellStyle;
+import org.apache.poi.xssf.usermodel.XSSFColor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class InvestWorkPaperPentrationExportExecutorImpl
+extends AbstractExportExcelMultiSheetExecutor {
+    @Autowired
+    private GcDirectInvestWorkPaperQueryTask gcDirectInvestWorkPaperQueryTask;
+    @Autowired
+    private OffsetTabExportTask offsetTabExportTask;
+    private ThreadLocal<Map<String, CellStyle>> threadLocal = new ThreadLocal();
+
+    public String getName() {
+        return "InvestWorkPaperPentrationExportExecutor";
+    }
+
+    protected List<ExportExcelSheet> exportExcelSheets(ExportContext context, Workbook workbook) {
+        QueryCondition condition = (QueryCondition)JsonUtils.readValue((String)context.getParam(), QueryCondition.class);
+        QueryParamsVO queryParamsVO = this.gcDirectInvestWorkPaperQueryTask.convertQueryParams(condition, new ArrayList<AbstractUnionRule>());
+        WorkPaperQueryTaskService queryTask = GcInvestWorkPaperQueryFactory.getInstance(condition.getSelectedShowType());
+        ArrayList<ExportExcelSheet> exportExcelSheets = new ArrayList<ExportExcelSheet>();
+        Pagination<Map<String, Object>> offsetMap = queryTask.listPentrationDatas(condition);
+        exportExcelSheets.add(this.offsetTabExportTask.createSheet(workbook, queryParamsVO, Boolean.valueOf(context.isTemplateExportFlag()), 0, offsetMap));
+        context.getVarMap().put("offsetIntervalRows", this.getOffSetIntervalRowSet(offsetMap));
+        return exportExcelSheets;
+    }
+
+    protected void callBackWorkbook(ExportContext context, Workbook workbook) {
+        this.threadLocal.remove();
+    }
+
+    protected void callBackCell(ExportContext context, ExportExcelSheet excelSheet, Workbook workbook, Sheet sheet, Row row, Cell cell, Object cellValue) {
+        Set rowSet;
+        int rowNum = row.getRowNum();
+        if (rowNum == 0) {
+            return;
+        }
+        Object intervalColorRows = context.getVarMap().get("offsetIntervalRows");
+        if (intervalColorRows != null && (rowSet = (Set)intervalColorRows).contains(rowNum)) {
+            this.setIntervalColor(workbook, cell);
+        }
+    }
+
+    private Set<Integer> getOffSetIntervalRowSet(Pagination<Map<String, Object>> offsetMap) {
+        List content = offsetMap.getContent();
+        if (CollectionUtils.isEmpty((Collection)content)) {
+            return null;
+        }
+        HashSet<Integer> rowNumber = new HashSet<Integer>();
+        HashSet<String> mrecids = new HashSet<String>();
+        for (int i = 0; i < content.size(); ++i) {
+            Map item = (Map)content.get(i);
+            if (item.get("MRECID") != null) {
+                mrecids.add(item.get("MRECID").toString());
+            }
+            if (mrecids.size() % 2 != 1) continue;
+            rowNumber.add(i + 1);
+        }
+        return rowNumber;
+    }
+
+    private Map<String, CellStyle> getCellStyleMap(Workbook workbook) {
+        Map<String, CellStyle> cellStyleMap = this.threadLocal.get();
+        if (cellStyleMap == null) {
+            cellStyleMap = new ConcurrentHashMap<String, CellStyle>();
+            CellStyle headStringStyle = this.buildDefaultHeadCellStyle(workbook);
+            headStringStyle.setAlignment(HorizontalAlignment.LEFT);
+            cellStyleMap.put("headString", headStringStyle);
+            CellStyle headAmtStyle = this.buildDefaultHeadCellStyle(workbook);
+            headAmtStyle.setAlignment(HorizontalAlignment.RIGHT);
+            headAmtStyle.setDataFormat(HSSFDataFormat.getBuiltinFormat("#,##0.00"));
+            cellStyleMap.put("headAmt", headAmtStyle);
+            CellStyle contentStringStyle = this.buildDefaultContentCellStyle(workbook);
+            contentStringStyle.setAlignment(HorizontalAlignment.LEFT);
+            cellStyleMap.put("contentString", contentStringStyle);
+            CellStyle contentAmtStyle = this.buildDefaultContentCellStyle(workbook);
+            contentAmtStyle.setAlignment(HorizontalAlignment.RIGHT);
+            contentAmtStyle.setDataFormat(HSSFDataFormat.getBuiltinFormat("#,##0.00"));
+            cellStyleMap.put("contentAmt", contentAmtStyle);
+            XSSFCellStyle intervalColorString = (XSSFCellStyle)this.buildDefaultContentCellStyle(workbook);
+            intervalColorString.setAlignment(HorizontalAlignment.LEFT);
+            intervalColorString.setFillForegroundColor(new XSSFColor(new Color(239, 248, 254), (IndexedColorMap)new DefaultIndexedColorMap()));
+            intervalColorString.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+            cellStyleMap.put("intervalColorString", intervalColorString);
+            XSSFCellStyle intervalColorAmt = (XSSFCellStyle)this.buildDefaultContentCellStyle(workbook);
+            intervalColorAmt.setAlignment(HorizontalAlignment.RIGHT);
+            intervalColorAmt.setFillForegroundColor(new XSSFColor(new Color(239, 248, 254), (IndexedColorMap)new DefaultIndexedColorMap()));
+            intervalColorAmt.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+            intervalColorAmt.setDataFormat(HSSFDataFormat.getBuiltinFormat("#,##0.00"));
+            cellStyleMap.put("intervalColorAmt", intervalColorAmt);
+            this.threadLocal.set(cellStyleMap);
+        }
+        return cellStyleMap;
+    }
+
+    private void setIntervalColor(Workbook workbook, Cell cell) {
+        if (cell.getCellStyle() != null && cell.getCellStyle().getAlignment() == HorizontalAlignment.RIGHT) {
+            cell.setCellStyle(this.getCellStyleMap(workbook).get("intervalColorAmt"));
+            return;
+        }
+        cell.setCellStyle(this.getCellStyleMap(workbook).get("intervalColorString"));
+    }
+}
+

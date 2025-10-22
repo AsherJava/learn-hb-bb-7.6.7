@@ -1,0 +1,89 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.jiuqi.gcreport.offsetitem.enums.FilterMethodEnum
+ *  com.jiuqi.gcreport.offsetitem.factory.action.button.GcAdjustButton
+ *  com.jiuqi.gcreport.offsetitem.gather.GcOffSetItemAction
+ *  com.jiuqi.gcreport.offsetitem.gather.GcOffsetItemDataSource
+ *  com.jiuqi.gcreport.offsetitem.gather.GcOffsetItemPage
+ *  com.jiuqi.gcreport.offsetitem.gather.GcOffsetItemShowType
+ *  com.jiuqi.gcreport.offsetitem.gather.impl.GcOffsetItemInputDataSource
+ *  com.jiuqi.gcreport.offsetitem.gather.impl.GcOffsetItemNotOffsetParentPageImpl
+ */
+package com.jiuqi.gcreport.inputdata.offsetitem.showtype.unoffsetparent;
+
+import com.jiuqi.gcreport.inputdata.offsetitem.action.button.AutoOffsetButton;
+import com.jiuqi.gcreport.inputdata.offsetitem.action.button.ColumnSelectButton;
+import com.jiuqi.gcreport.inputdata.offsetitem.action.button.ExportButton;
+import com.jiuqi.gcreport.inputdata.offsetitem.action.button.FilterButton;
+import com.jiuqi.gcreport.inputdata.offsetitem.action.button.RefreshButton;
+import com.jiuqi.gcreport.inputdata.offsetitem.action.query.unoffsetparent.ChildrenUnitGroupParentQueryAction;
+import com.jiuqi.gcreport.inputdata.offsetitem.factory.UnoffsetParentTabFixedExportTask.UnOffsetParentTabChildrenUnitGroupExportTask;
+import com.jiuqi.gcreport.offsetitem.enums.FilterMethodEnum;
+import com.jiuqi.gcreport.offsetitem.factory.action.button.GcAdjustButton;
+import com.jiuqi.gcreport.offsetitem.gather.GcOffSetItemAction;
+import com.jiuqi.gcreport.offsetitem.gather.GcOffsetItemDataSource;
+import com.jiuqi.gcreport.offsetitem.gather.GcOffsetItemPage;
+import com.jiuqi.gcreport.offsetitem.gather.GcOffsetItemShowType;
+import com.jiuqi.gcreport.offsetitem.gather.impl.GcOffsetItemInputDataSource;
+import com.jiuqi.gcreport.offsetitem.gather.impl.GcOffsetItemNotOffsetParentPageImpl;
+import java.util.ArrayList;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class GcChildrenUnitGroupUnOffsetParent
+implements GcOffsetItemShowType {
+    @Autowired
+    private ChildrenUnitGroupParentQueryAction childrenUnitGroupParentQueryAction;
+    @Autowired
+    private UnOffsetParentTabChildrenUnitGroupExportTask unOffsetParentTabChildrenUnitGroupExportTask;
+    @Autowired
+    private AutoOffsetButton autoOffsetButton;
+    @Autowired
+    private FilterButton filterButton;
+    @Autowired
+    private ColumnSelectButton columnSelectButton;
+    @Autowired
+    private ExportButton exportButton;
+    @Autowired
+    private RefreshButton refreshButton;
+    @Autowired
+    private GcAdjustButton gcAdjustButton;
+
+    public GcOffsetItemPage getPage() {
+        return GcOffsetItemNotOffsetParentPageImpl.newInstance();
+    }
+
+    public GcOffsetItemDataSource getDataSource() {
+        return GcOffsetItemInputDataSource.newInstance();
+    }
+
+    public String getCode() {
+        return FilterMethodEnum.CHILDRENUNITGROUP.getCode();
+    }
+
+    public String getTitle() {
+        return FilterMethodEnum.CHILDRENUNITGROUP.getTitle();
+    }
+
+    public List<Object> getSelectedData(Object object) {
+        return null;
+    }
+
+    public List<GcOffSetItemAction> actions() {
+        ArrayList<GcOffSetItemAction> list = new ArrayList<GcOffSetItemAction>();
+        list.add(this.childrenUnitGroupParentQueryAction);
+        list.add(this.unOffsetParentTabChildrenUnitGroupExportTask);
+        list.add((GcOffSetItemAction)this.autoOffsetButton);
+        list.add((GcOffSetItemAction)this.filterButton);
+        list.add((GcOffSetItemAction)this.columnSelectButton);
+        list.add((GcOffSetItemAction)this.exportButton);
+        list.add((GcOffSetItemAction)this.refreshButton);
+        list.add((GcOffSetItemAction)this.gcAdjustButton);
+        return list;
+    }
+}
+
