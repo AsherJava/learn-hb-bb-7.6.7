@@ -1,0 +1,16 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.single.client-3.0.200.jar
+Decompiled with CFR 0.152
+
+
+nr.single.client.internal.service.upload.UploadJioDataServiceImpl
+----------------------------
+
+uploadSingleFilesByZipFile2(nr.single.map.data.TaskDataContext java.lang.String java.lang.String java.util.Map<java.lang.String, nr.single.map.data.SingleFieldFileInfo> )
+  Unable to fully structure code
+
+
+nr.single.client.internal.service.export.ExportJioTaskDataServiceImpl
+----------------------------
+
+ExportBathchDataByPeriods(com.jiuqi.nr.dataentry.bean.BatchExportInfo com.jiuqi.np.asynctask.AsyncTaskMonitor java.util.List<com.jiuqi.nr.dataentry.model.BatchDimensionParam> java.util.List<java.lang.String> java.util.List<java.lang.String> java.lang.String java.util.List<com.jiuqi.nr.dataentry.bean.BatchExportData> )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [2[TRYBLOCK]], but top level block is 45[FORLOOP]
