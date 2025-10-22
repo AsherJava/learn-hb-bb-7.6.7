@@ -1,0 +1,11 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\data-partner-impl-1.0.4.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.datapartnerapi.service.impl.FormDataApiServiceImpl
+----------------------------
+
+downloadFormStyle(com.jiuqi.nr.datapartnerapi.domain.FormInfo )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+exportTaskData(com.jiuqi.nr.datapartnerapi.domain.FormDataQueryDTO )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once

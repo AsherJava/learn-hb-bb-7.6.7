@@ -1,0 +1,9 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\gcreport-bde-nr-fetch-impl-7.6.7.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.gcreport.bde.fetch.impl.runner.BdeBatchFetchRunner
+----------------------------
+
+excute(com.jiuqi.bi.core.jobs.JobContext )
+  Loose catch block
