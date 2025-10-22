@@ -1,0 +1,75 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.nr.snapshot.message;
+
+import com.jiuqi.nr.snapshot.consts.RegionType;
+import com.jiuqi.nr.snapshot.message.FloatCompareDifference;
+import com.jiuqi.nr.snapshot.service.IDataRegionCompareDifference;
+import java.io.Serializable;
+import java.util.List;
+
+public class FloatDataRegionCompareDifference
+implements IDataRegionCompareDifference,
+Serializable {
+    private static final long serialVersionUID = 4368377880269568601L;
+    private String regionName;
+    private String regionKey;
+    private List<String> naturalKeys;
+    private List<FloatCompareDifference> floatCompareDifferences;
+    private int differenceCount;
+    private RegionType regionType;
+
+    @Override
+    public String getRegionName() {
+        return this.regionName;
+    }
+
+    public void setRegionName(String regionName) {
+        this.regionName = regionName;
+    }
+
+    @Override
+    public String getRegionKey() {
+        return this.regionKey;
+    }
+
+    public void setRegionKey(String regionKey) {
+        this.regionKey = regionKey;
+    }
+
+    public List<String> getNaturalKeys() {
+        return this.naturalKeys;
+    }
+
+    public void setNaturalKeys(List<String> naturalKeys) {
+        this.naturalKeys = naturalKeys;
+    }
+
+    public List<FloatCompareDifference> getFloatCompareDifferences() {
+        return this.floatCompareDifferences;
+    }
+
+    public void setFloatCompareDifferences(List<FloatCompareDifference> floatCompareDifferences) {
+        this.floatCompareDifferences = floatCompareDifferences;
+    }
+
+    @Override
+    public int getDifferenceCount() {
+        return this.differenceCount;
+    }
+
+    public void setDifferenceCount(int differenceCount) {
+        this.differenceCount = differenceCount;
+    }
+
+    @Override
+    public RegionType getRegionType() {
+        return this.regionType;
+    }
+
+    public void setRegionType(RegionType regionType) {
+        this.regionType = regionType;
+    }
+}
+

@@ -1,0 +1,82 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.nr.dataresource.web;
+
+public class ApiConsts {
+    public static final String REST_PREFIX = "api/v1/dataresource/";
+    public static final String REST_API_RESOURCE_TREE_TAGS = "\u6570\u636e\u8d44\u6e90\uff1a\u6570\u636e\u8d44\u6e90\u6811\u6811\u5f62API";
+    public static final String REST_API_RESOURCE_TREE_TREE = "\u8d44\u6e90\u6811\u6839\u8282\u70b9";
+    public static final String REST_API_RESOURCE_TREE_TREE_URL = "/tree/root";
+    public static final String REST_API_RESOURCE_TREE_LEVEL = "\u8d44\u6e90\u6811\u4e0b\u7ea7\u8282\u70b9";
+    public static final String REST_API_RESOURCE_TREE_LEVEL_URL = "/tree/children";
+    public static final String REST_API_RESOURCE_TREE_PATH = "\u8d44\u6e90\u6811\u5b9a\u4f4d";
+    public static final String REST_API_RESOURCE_TREE_PATH_URL = "/tree/positioning";
+    public static final String REST_API_RESOURCE_FILTER = "\u8d44\u6e90\u6811\u641c\u7d22";
+    public static final String REST_API_RESOURCE_FILTER_URL = "/tree/search";
+    public static final String REST_API_RESOURCE_TAGS = "\u6570\u636e\u8d44\u6e90\uff1a\u76ee\u5f55API";
+    public static final String REST_API_RESOURCE_QUERY = "\u76ee\u5f55\u67e5\u8be2";
+    public static final String REST_API_RESOURCE_URL = "resource/get";
+    public static final String REST_API_RESOURCE_ADD = "\u76ee\u5f55\u6dfb\u52a0";
+    public static final String REST_API_RESOURCE_ADD_URL = "resource/add";
+    public static final String REST_API_RESOURCE_DEL = "\u76ee\u5f55\u5220\u9664";
+    public static final String REST_API_RESOURCE_DEL_URL = "resource/del";
+    public static final String REST_API_RESOURCE_UPDATE = "\u76ee\u5f55\u66f4\u65b0";
+    public static final String REST_API_RESOURCE_UPDATE_URL = "resource/update";
+    public static final String REST_API_RESOURCE_UPDATE_ORDER_URL = "resource/action/move";
+    public static final String REST_API_GROUP_TAGS = "\u6570\u636e\u8d44\u6e90\uff1a\u5206\u7ec4API";
+    public static final String REST_API_GROUP_QUERY = "\u5206\u7ec4/\u76ee\u5f55\u67e5\u8be2";
+    public static final String REST_API_GROUP_URL = "group/get";
+    public static final String REST_API_GROUP_ADD = "\u5206\u7ec4/\u76ee\u5f55\u6dfb\u52a0";
+    public static final String REST_API_GROUP_ADD_URL = "group/add";
+    public static final String REST_API_GROUP_DEL = "\u5206\u7ec4/\u76ee\u5f55\u5220\u9664";
+    public static final String REST_API_GROUP_DEL_URL = "group/del";
+    public static final String REST_API_GROUP_UPDATE = "\u5206\u7ec4/\u76ee\u5f55\u66f4\u65b0";
+    public static final String REST_API_GROUP_UPDATE_URL = "group/update";
+    public static final String REST_API_RESOURCE_DEFINE_TAGS = "\u6570\u636e\u8d44\u6e90\uff1a\u8d44\u6e90\u6811API";
+    public static final String REST_API_DEFINE_QUERY = "\u8d44\u6e90\u6811\u67e5\u8be2";
+    public static final String REST_API_DEFINE_URL = "define/get";
+    public static final String REST_API_DEFINE_ADD = "\u8d44\u6e90\u6811\u6dfb\u52a0";
+    public static final String REST_API_DEFINE_ADD_URL = "define/add";
+    public static final String REST_API_DEFINE_DEL = "\u8d44\u6e90\u6811\u5220\u9664";
+    public static final String REST_API_DEFINE_DEL_URL = "define/del";
+    public static final String REST_API_DEFINE_UPDATE = "\u8d44\u6e90\u6811\u66f4\u65b0";
+    public static final String REST_API_DEFINE_UPDATE_URL = "define/update";
+    public static final String REST_API_DEFINE_GROUP_QUERY = "\u8d44\u6e90\u6811\u67e5\u8be2";
+    public static final String REST_API_DEFINE_GROUP_URL = "define/group";
+    public static final String REST_API_DEFINE_AUTH = "\u8d44\u6e90\u6811\u6743\u9650";
+    public static final String REST_API_DEFINE_AUTH_URL = "define/auth";
+    public static final String REST_API_DEFINE_COPY = "\u8d44\u6e90\u6811\u590d\u5236";
+    public static final String REST_API_DEFINE_COPY_URL = "define/copy";
+    public static final String REST_API_RUN_SCHEMETREE_TREE_LEVEL = "\u83b7\u53d6\u8fd0\u884c\u671f\u6570\u636e\u65b9\u6848\u67d0\u4e2aKEY\u4e0b\u6240\u6709\u76f4\u63a5\u5b50\u8282\u70b9";
+    public static final String REST_API_RUN_SCHEMETREE_TREE_LEVEL_URL = "r-tree/children/{linkZb}";
+    public static final String REST_API_RUN_SCHEMETREE_TREE_PATH = "\u8fd0\u884c\u671f\u6570\u636e\u65b9\u6848\u5b9a\u4f4d,\u6570\u636e\u65b9\u6848\u5206\u7ec4\u6811\u5f62";
+    public static final String REST_API_RUN_SCHEMETREE_TREE_PATH_URL = "r-tree/path";
+    public static final String REST_API_RESOURCE_LINK_TAGS = "\u6570\u636e\u8d44\u6e90\uff1a\u6307\u6807\u5173\u8054API";
+    public static final String REST_API_FIELD_QUERY_URL = "fd/get";
+    public static final String REST_API_FIELD_QUERY = "\u5206\u7ec4\u4e0b\u8d44\u6e90\u67e5\u8be2";
+    public static final String REST_API_DIM_QUERY_URL = "dim/get";
+    public static final String REST_API_DIM_QUERY = "\u5206\u7ec4\u4e0b\u7ef4\u5ea6\u5c5e\u6027\u67e5\u8be2";
+    public static final String REST_API_FM_DIM_QUERY_URL = "dim/fm/get";
+    public static final String REST_API_FM_DIM_QUERY = "\u5206\u7ec4\u4e0b\u7ef4\u5ea6\u5c5e\u6027\u67e5\u8be2";
+    public static final String REST_API_CHECKED_ADD_URL = "link/add";
+    public static final String REST_API_CHECKED_MATCH_ADD_URL = "link/match-add";
+    public static final String REST_API_CHECKED_ADD = "\u590d\u9009\u6dfb\u52a0\u5173\u8054";
+    public static final String REST_API_CHECKED_DEL_URL = "link/del";
+    public static final String REST_API_CHECKED_DEL = "\u5220\u9664\u5173\u8054";
+    public static final String REST_API_CHECKED_UPDATE = "\u66f4\u65b0\u5173\u8054";
+    public static final String REST_API_CHECKED_UPDATE_URL = "link/update";
+    public static final String REST_API_DIM_SET_URL = "dim/set";
+    public static final String REST_API_DIM_SET = "\u5206\u7ec4\u4e0b\u7ef4\u5ea6\u5c5e\u6027\u8bbe\u7f6e\u5c5e\u6027";
+    public static final String REST_API_FIELD_S_QUERY = "\u6839\u636e\u65b9\u6848(\u5206\u7ec4/\u6307\u6807)\u641c\u7d22\u6570\u636e\u6307\u6807";
+    public static final String REST_API_FIELD_S_QUERY_URL = "fd/search";
+    public static final String REST_API_TABLE_COLUMN = "\u83b7\u53d6\u8868\u683c\u5217";
+    public static final String REST_API_TABLE_COLUMN_URL = "table/column/{containExtProp}";
+    public static final String REST_API_RUN_SCHEMETREE_ALL_LEY = "\u83b7\u53d6\u8fd0\u884c\u671f\u6570\u636e\u65b9\u6848\u67d0\u4e2aKEY\u4e0b\u6240\u6709\u5b50\u8282\u70b9\u7684key";
+    public static final String REST_API_RUN_SCHEMETREE_ALL_LEY_URL = "r-tree/all-children";
+    public static final String REST_API_RUN_SCHEMETREE_MDINFO_LEY = "\u83b7\u53d6\u8fd0\u884c\u671f\u5355\u4f4d\u4fe1\u606f\u8868\u4e0b\u7684\u5b57\u6bb5";
+    public static final String REST_API_RUN_SCHEMETREE_MDINFO_LEY_URL = "r-tree/mdinfo";
+    public static final String REST_API_SCHEME_LIST = "\u6570\u636e\u65b9\u6848\u5217\u8868";
+    public static final String REST_API_SCHEME_LIST_URL = "data-scheme";
+}
+

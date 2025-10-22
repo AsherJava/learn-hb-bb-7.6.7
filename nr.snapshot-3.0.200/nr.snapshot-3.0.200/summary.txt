@@ -1,0 +1,9 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.snapshot-3.0.200.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.snapshot.service.impl.SnapshotServiceImpl
+----------------------------
+
+createSnapshotFile(com.jiuqi.nr.snapshot.input.CreateSnapshotInfo com.jiuqi.nr.definition.facade.TaskDefine com.jiuqi.nr.common.util.DimensionChanger com.jiuqi.nr.datascheme.api.DataScheme java.util.Map<java.lang.String, com.jiuqi.nr.snapshot.message.DSDimensionInfo> )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once

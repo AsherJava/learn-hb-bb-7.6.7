@@ -1,0 +1,11 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.nr.snapshot.consts;
+
+public enum RegionType {
+    FIXED,
+    FLOAT;
+
+}
+

@@ -1,0 +1,18 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr-datascheme-2.15.200.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.datascheme.internal.dao.impl.TransUtil
+----------------------------
+
+transBlob(java.lang.Object )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [0[TRYBLOCK], 17[CATCHBLOCK]], but top level block is 3[TRYBLOCK]
+transClob(java.lang.Object )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.nr.datascheme.internal.dao.impl.DataSchemePreDeployInfoDaoImpl
+----------------------------
+
+insert(java.util.List<com.jiuqi.nr.datascheme.internal.entity.PreDeployInfoDO> )
+  Exception : java.lang.UnsupportedOperationException
