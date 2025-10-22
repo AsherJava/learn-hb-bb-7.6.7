@@ -1,0 +1,9 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.bpm-2.15.201.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.bpm.impl.activiti6.NrDbSqlSessionConfigurator
+----------------------------
+
+createSqlSessionFactory(org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once

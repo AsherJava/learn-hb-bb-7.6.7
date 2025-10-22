@@ -1,0 +1,219 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.nr.batch.summary.service.dbutil;
+
+import com.jiuqi.nr.batch.summary.service.dbutil.ITableEntityData;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.NoSuchElementException;
+
+public class TableEntityData
+implements ITableEntityData {
+    private static final long serialVersionUID = 8601052734209279491L;
+    protected String[] columns;
+    protected Object[][] dataTable;
+    protected Map<String, Integer> colIdxMap;
+    protected String[] rowTags = new String[0];
+
+    public TableEntityData() {
+        this(new String[0]);
+    }
+
+    public TableEntityData(String[] columns) {
+        this.columns = columns;
+        this.dataTable = new Object[0][columns.length];
+        this.colIdxMap = this.getColumnIndexMap(columns);
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return this.dataTable.length == 0;
+    }
+
+    @Override
+    public int getRowCount() {
+        return this.dataTable.length;
+    }
+
+    @Override
+    public String[] getColumns() {
+        return this.columns != null ? this.columns : new String[]{};
+    }
+
+    @Override
+    public Object getCellValue(int rowIdx, String column) {
+        if (rowIdx < 0 || rowIdx >= this.dataTable.length) {
+            throw new IndexOutOfBoundsException("\u65e0\u6548\u7684\u884c\u7d22\u5f15" + rowIdx);
+        }
+        Integer colIdx = this.colIdxMap.get(column);
+        if (colIdx == null) {
+            throw new IllegalArgumentException("\u65e0\u6548\u7684\u5217\u5b9a\u4e49: " + column);
+        }
+        return this.dataTable[rowIdx][colIdx];
+    }
+
+    @Override
+    public Iterator<Object[]> rowIterator() {
+        return new RowIterator();
+    }
+
+    @Override
+    public Iterator<Object[]> columnIterator() {
+        return new ColumnIterator();
+    }
+
+    public void appendRows(int rowCount) {
+        if (rowCount <= 0) {
+            throw new IllegalArgumentException("\u65e0\u6548\u7684\u6269\u5c55\u884c\u6570: " + rowCount);
+        }
+        this.dataTable = (Object[][])Arrays.copyOf(this.dataTable, this.dataTable.length + rowCount);
+        this.rowTags = Arrays.copyOf(this.rowTags, this.rowTags.length + rowCount);
+        for (int rowIdx = this.dataTable.length - rowCount; rowIdx < this.dataTable.length; ++rowIdx) {
+            this.dataTable[rowIdx] = new Object[this.columns.length];
+        }
+    }
+
+    public void appendCols(String[] newColumns) {
+        if (newColumns == null || newColumns.length == 0) {
+            return;
+        }
+        List<String> cs = Arrays.asList(this.columns);
+        ArrayList<String> ncs = new ArrayList<String>();
+        for (String column : newColumns) {
+            if (cs.contains(column)) continue;
+            ncs.add(column);
+        }
+        newColumns = ncs.toArray(new String[0]);
+        this.columns = Arrays.copyOf(this.columns, this.columns.length + newColumns.length);
+        System.arraycopy(newColumns, 0, this.columns, this.columns.length - newColumns.length, newColumns.length);
+        this.colIdxMap = this.getColumnIndexMap(this.columns);
+        Object[][] newData = new Object[this.dataTable.length][this.columns.length];
+        for (int i = 0; i < this.dataTable.length; ++i) {
+            System.arraycopy(this.dataTable[i], 0, newData[i], 0, this.dataTable[i].length);
+        }
+        this.dataTable = newData;
+    }
+
+    public void setCellValue(int rowIdx, String column, Object value) {
+        if (rowIdx < 0) {
+            throw new IndexOutOfBoundsException("\u65e0\u6548\u7684\u884c\u7d22\u5f15: " + rowIdx);
+        }
+        Integer colIdx = this.colIdxMap.get(column);
+        if (colIdx == null) {
+            throw new IllegalArgumentException("\u65e0\u6548\u7684\u5217\u5b9a\u4e49: " + column);
+        }
+        if (rowIdx >= this.dataTable.length) {
+            this.appendRows(rowIdx - this.dataTable.length + 1);
+        }
+        this.dataTable[rowIdx][colIdx.intValue()] = value;
+    }
+
+    public void setCellValue(int rowIdx, int colIdx, Object value) {
+        if (rowIdx < 0) {
+            throw new IndexOutOfBoundsException("\u65e0\u6548\u7684\u884c\u7d22\u5f15: " + rowIdx);
+        }
+        if (!this.colIdxMap.containsValue(colIdx)) {
+            throw new IllegalArgumentException("\u65e0\u6548\u7684\u5217\u7d22\u5f15: " + colIdx);
+        }
+        if (rowIdx >= this.dataTable.length) {
+            this.appendRows(rowIdx - this.dataTable.length + 1);
+        }
+        this.dataTable[rowIdx][colIdx] = value;
+    }
+
+    public void setRowData(int rowIdx, String[] columns, Object[] rowData) {
+        if (columns == null) {
+            throw new IllegalArgumentException("\u65e0\u6548\u7684\u5217\u5bbd\uff01\uff01\uff01");
+        }
+        if (rowData == null) {
+            throw new IllegalArgumentException("\u65e0\u6548\u7684\u884c\u6570\u636e\uff01\uff01\uff01");
+        }
+        if (rowIdx < 0) {
+            throw new IndexOutOfBoundsException("\u65e0\u6548\u7684\u884c\u7d22\u5f15: " + rowIdx);
+        }
+        if (rowIdx >= this.dataTable.length) {
+            this.appendRows(rowIdx - this.dataTable.length + 1);
+        }
+        for (int colIdx = 0; colIdx < columns.length; ++colIdx) {
+            this.setCellValue(rowIdx, columns[colIdx], rowData[colIdx]);
+        }
+    }
+
+    private Map<String, Integer> getColumnIndexMap(String[] columns) {
+        HashMap<String, Integer> columnIndexMap = new HashMap<String, Integer>();
+        for (int i = 0; i < columns.length; ++i) {
+            columnIndexMap.put(columns[i], i);
+        }
+        return columnIndexMap;
+    }
+
+    public void toString(StringBuilder info) {
+        for (String columnName : this.columns) {
+            info.append(" | ");
+            info.append(columnName);
+        }
+        info.append('\n');
+        Iterator<Object[]> iterator = this.rowIterator();
+        while (iterator.hasNext()) {
+            Object[] nextRow;
+            for (Object cellValue : nextRow = iterator.next()) {
+                info.append(" | ");
+                info.append(cellValue);
+            }
+            info.append('\n');
+        }
+    }
+
+    private class ColumnIterator
+    implements Iterator<Object[]> {
+        private int columnIndex = 0;
+
+        private ColumnIterator() {
+        }
+
+        @Override
+        public boolean hasNext() {
+            return this.columnIndex < TableEntityData.this.columns.length;
+        }
+
+        @Override
+        public Object[] next() {
+            if (!this.hasNext()) {
+                throw new NoSuchElementException();
+            }
+            Object[] columnData = new Object[TableEntityData.this.dataTable.length];
+            for (int i = 0; i < TableEntityData.this.dataTable.length; ++i) {
+                columnData[i] = TableEntityData.this.dataTable[i][this.columnIndex];
+            }
+            ++this.columnIndex;
+            return columnData;
+        }
+    }
+
+    private class RowIterator
+    implements Iterator<Object[]> {
+        private int rowIndex = 0;
+
+        private RowIterator() {
+        }
+
+        @Override
+        public boolean hasNext() {
+            return this.rowIndex < TableEntityData.this.dataTable.length;
+        }
+
+        @Override
+        public Object[] next() {
+            if (!this.hasNext()) {
+                throw new NoSuchElementException();
+            }
+            return TableEntityData.this.dataTable[this.rowIndex++];
+        }
+    }
+}
+

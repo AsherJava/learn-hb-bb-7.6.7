@@ -1,0 +1,34 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.dataio-1.13.1.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.io.record.util.TransUtils
+----------------------------
+
+transClob(java.sql.Clob )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.nr.io.record.dao.ImportHistoryDao
+----------------------------
+
+queryAll(int int )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+queryByCreator(java.lang.String int int )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.nr.io.record.dao.UnitFailureRecordDao
+----------------------------
+
+queryFailureRecords(java.lang.String int int )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+queryFailureRecordsByFactory(java.lang.String java.lang.String int int )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.nr.io.record.dao.FormStatisticDao
+----------------------------
+
+queryStatisticLogs(java.lang.String java.lang.String int int )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once

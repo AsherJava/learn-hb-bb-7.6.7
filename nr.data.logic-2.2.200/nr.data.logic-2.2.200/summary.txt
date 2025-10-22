@@ -1,0 +1,15 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.data.logic-2.2.200.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.data.logic.internal.query.CheckResultSqlBuilder
+----------------------------
+
+executeQuery(java.lang.String java.sql.Connection )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+executeQueryCount(java.lang.String java.sql.Connection )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+executeQueryExist(java.lang.String java.sql.Connection )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+bs2String(java.io.InputStream )
+  Loose catch block

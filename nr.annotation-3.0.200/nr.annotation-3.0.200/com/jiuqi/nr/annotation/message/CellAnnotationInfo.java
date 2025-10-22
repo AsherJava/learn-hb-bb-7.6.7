@@ -1,0 +1,44 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.nr.annotation.message;
+
+public class CellAnnotationInfo {
+    private String dataLinkKey;
+    private String rowId;
+    private String show;
+    private String fieldKey;
+
+    public String getDataLinkKey() {
+        return this.dataLinkKey;
+    }
+
+    public void setDataLinkKey(String dataLinkKey) {
+        this.dataLinkKey = dataLinkKey;
+    }
+
+    public String getRowId() {
+        return this.rowId;
+    }
+
+    public void setRowId(String rowId) {
+        this.rowId = rowId;
+    }
+
+    public String getShow() {
+        return this.show;
+    }
+
+    public void setShow(String show) {
+        this.show = show;
+    }
+
+    public String getFieldKey() {
+        return this.fieldKey;
+    }
+
+    public void setFieldKey(String fieldKey) {
+        this.fieldKey = fieldKey;
+    }
+}
+

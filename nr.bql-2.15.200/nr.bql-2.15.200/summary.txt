@@ -1,0 +1,9 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.bql-2.15.200.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.bql.extend.NvwaDataSourceTableAdapter
+----------------------------
+
+getTableColumns(java.sql.Connection java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once

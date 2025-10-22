@@ -1,0 +1,121 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.jiuqi.np.dataengine.common.DimensionValueSet
+ *  com.jiuqi.np.dataengine.intf.IDataRow
+ *  com.jiuqi.np.definition.facade.FieldDefine
+ *  com.jiuqi.nr.file.FileInfo
+ */
+package com.jiuqi.nr.io.tz.dataset;
+
+import com.jiuqi.np.dataengine.common.DimensionValueSet;
+import com.jiuqi.np.dataengine.intf.IDataRow;
+import com.jiuqi.np.definition.facade.FieldDefine;
+import com.jiuqi.nr.file.FileInfo;
+import com.jiuqi.nr.io.dataset.IRegionDataSet;
+import com.jiuqi.nr.io.dataset.IRegionDataSetReader;
+import com.jiuqi.nr.io.params.input.ImportErrorData;
+import com.jiuqi.nr.io.params.input.ImportResult;
+import com.jiuqi.nr.io.params.output.ExportEntity;
+import com.jiuqi.nr.io.sb.bean.ImportInfo;
+import com.jiuqi.nr.io.service.MultistageUnitReplace;
+import com.jiuqi.nr.io.service.MzOrgCodeRepairService;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public abstract class AbstractRegionDataSet
+implements IRegionDataSet {
+    @Override
+    public int getTotalCount() {
+        return 0;
+    }
+
+    @Override
+    public List<FileInfo> getAttamentFiles() {
+        return null;
+    }
+
+    @Override
+    public List<ExportEntity> getEntitys() {
+        return null;
+    }
+
+    @Override
+    public Map<String, Set<String>> getUnImport() throws Exception {
+        return new HashMap<String, Set<String>>();
+    }
+
+    @Override
+    public List<ImportErrorData> getImportErrorInfos() {
+        return new ArrayList<ImportErrorData>();
+    }
+
+    @Override
+    public List<ImportErrorData> getImportAmendInfos() {
+        return new ArrayList<ImportErrorData>();
+    }
+
+    @Override
+    public ImportResult getImportResult() {
+        return new ImportResult();
+    }
+
+    @Override
+    public String getCodeTitle(String code) {
+        return null;
+    }
+
+    @Override
+    public int getDbDataCount() {
+        return 0;
+    }
+
+    @Override
+    public boolean hasNext() {
+        return false;
+    }
+
+    @Override
+    public ArrayList<Object> next() {
+        return null;
+    }
+
+    @Override
+    public void close() {
+    }
+
+    @Override
+    public DimensionValueSet importDatas(List<Object> row) throws Exception {
+        return null;
+    }
+
+    @Override
+    public ImportInfo commit() throws Exception {
+        return null;
+    }
+
+    @Override
+    public void queryToDataRowReader(IRegionDataSetReader reader) {
+    }
+
+    public MultistageUnitReplace getMultistageUnitReplace() {
+        return null;
+    }
+
+    public MzOrgCodeRepairService getMzOrgCodeRepairService() {
+        return null;
+    }
+
+    public String dataTransfer(FieldDefine fieldDefine, String data) {
+        return null;
+    }
+
+    public String dwValueRepair(IDataRow dataRow, String data) {
+        return null;
+    }
+}
+

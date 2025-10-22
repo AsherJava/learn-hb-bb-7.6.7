@@ -1,0 +1,39 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.analysisreport2-3.0.200.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.analysisreport.utils.OfficeUtil
+----------------------------
+
+CropImage(java.lang.String int int int int )
+  Loose catch block
+
+
+com.jiuqi.nr.analysisreport.utils.TableOfContents
+----------------------------
+
+getPDFPagenum(com.jiuqi.nr.analysisreport.utils.CustomXWPFDocument )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 4 blocks at once
+convertToPdf(com.jiuqi.nr.analysisreport.utils.CustomXWPFDocument )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.nr.analysisreport.utils.WordUtil
+----------------------------
+
+convertToPdf(org.apache.poi.xwpf.usermodel.XWPFDocument )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.nr.analysisreport.biservice.bi.ChartServices
+----------------------------
+
+Export(java.lang.String java.util.Map<java.lang.String, java.util.List<java.lang.String>> java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [1[TRYBLOCK]], but top level block is 15[CASE]
+
+
+com.jiuqi.nr.analysisreport.biservice.bi.ReportServices
+----------------------------
+
+Export(java.lang.String java.util.Map<java.lang.String, java.util.List<java.lang.String>> java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [1[TRYBLOCK]], but top level block is 15[CASE]

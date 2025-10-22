@@ -1,0 +1,74 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.jiuqi.np.common.exception.ErrorEnum
+ */
+package com.jiuqi.np.definition.exception;
+
+import com.jiuqi.np.common.exception.ErrorEnum;
+
+public enum NpDefinitionExceptionEnum implements ErrorEnum
+{
+    NPDEFINITION_EXCEPTION_001("001", "NP\u5efa\u6a21\u5f02\u5e38\uff01"),
+    NPDEFINITION_EXCEPTION_002("002", "\u6307\u6807\u4ee3\u7801\u91cd\u590d\uff01"),
+    NPDEFINITION_EXCEPTION_003("003", "\u521d\u59cb\u5316\u5b58\u50a8\u8868\u5206\u7ec4\u6811\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_004("004", "\u52a0\u8f7d\u5b58\u50a8\u8868\u5206\u7ec4\u6811\u5b50\u8282\u70b9\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_005("005", "\u5b9a\u4f4d\u5b58\u50a8\u8868\u5206\u7ec4\u6811\u8282\u70b9\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_006("006", "\u521d\u59cb\u5316\u5b58\u50a8\u8868\u6811\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_007("007", "\u52a0\u8f7d\u5b58\u50a8\u8868\u6811\u5b50\u8282\u70b9\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_008("008", "\u5b9a\u4f4d\u5b58\u50a8\u8868\u6811\u8282\u70b9\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_009("009", "\u6a21\u7cca\u67e5\u8be2\u5b58\u50a8\u8868\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_010("010", "\u6a21\u7cca\u67e5\u8be2\u6307\u6807\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_201("201", "UUID\u8f6c\u6362\u5f02\u5e38"),
+    NPDEFINITION_EXCEPTION_202("202", "\u5220\u9664\u6307\u6807\u5931\u8d25\uff0c\u8bf7\u5148\u8bbe\u7f6e\u4e1a\u52a1\u4e3b\u952e\u518d\u5220\u9664"),
+    NPDEFINITION_EXCEPTION_203("203", "\u65b0\u589e\u6307\u6807\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u65b0\u589e\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_204("204", "\u66f4\u65b0\u6307\u6807\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u66f4\u65b0\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_205("205", "\u5220\u9664\u6307\u6807\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u5220\u9664\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_206("206", "\u8bbe\u7f6e\u4e1a\u52a1\u4e3b\u952e\u5931\u8d25\uff0c\u6ca1\u8981\u627e\u5230\u5f53\u524d\u5b58\u50a8\u8868"),
+    NPDEFINITION_EXCEPTION_207("207", "\u8bbe\u7f6e\u4e1a\u52a1\u4e3b\u952e\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u8bbe\u7f6e\u4e1a\u52a1\u4e3b\u952e\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_208("208", "\u4e0d\u5141\u8bb8\u4fee\u6539\u7cfb\u7edf\u6307\u6807\u7684\u540d\u79f0\u3001\u4ee3\u7801\u3001\u7c7b\u578b"),
+    NPDEFINITION_EXCEPTION_209("209", "\u4e0d\u5141\u8bb8\u5220\u9664\u7cfb\u7edf\u6307\u6807"),
+    NPDEFINITION_EXCEPTION_210("210", "\u67e5\u8be2\u89c6\u56fe\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_211("211", "\u65b0\u589e\u5b58\u50a8\u8868\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u65b0\u589e\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_212("212", "\u66f4\u65b0\u5b58\u50a8\u8868\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u66f4\u65b0\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_213("213", "\u5220\u9664\u5b58\u50a8\u8868\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u5220\u9664\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_214("214", "\u67e5\u8be2\u5b58\u50a8\u8868\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_215("215", "\u67e5\u8be2\u6307\u6807\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_221("221", "\u65b0\u589e\u6307\u6807\u5206\u7ec4\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u65b0\u589e\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_222("222", "\u66f4\u65b0\u6307\u6807\u5206\u7ec4\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u66f4\u65b0\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_223("223", "\u5220\u9664\u6307\u6807\u5206\u7ec4\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u5220\u9664\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_224("224", "\u67e5\u8be2\u6307\u6807\u5206\u7ec4\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_225("225", "\u8bbe\u7f6e\u6307\u6807\u4e0e\u5206\u7ec4\u5173\u7cfb\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_226("226", "\u79fb\u9664\u6307\u6807\u4e0e\u5206\u7ec4\u5173\u7cfb\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_231("231", "\u65b0\u589e\u5b58\u50a8\u8868\u5206\u7ec4\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u65b0\u589e\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_232("232", "\u66f4\u65b0\u5b58\u50a8\u8868\u5206\u7ec4\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u66f4\u65b0\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_233("233", "\u5220\u9664\u5b58\u50a8\u8868\u5206\u7ec4\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u5220\u9664\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_234("234", "\u67e5\u8be2\u5b58\u50a8\u8868\u5206\u7ec4\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_235("235", "\u8bbe\u7f6e\u5b58\u50a8\u8868\u4e0e\u5206\u7ec4\u5173\u7cfb\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_236("236", "\u79fb\u9664\u5b58\u50a8\u8868\u4e0e\u5206\u7ec4\u5173\u7cfb\u5931\u8d25"),
+    NPDEFINITION_EXCEPTION_241("241", "\u65b0\u589e\u7d22\u5f15\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u65b0\u589e\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_242("242", "\u66f4\u65b0\u7d22\u5f15\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u66f4\u65b0\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_243("243", "\u5220\u9664\u7d22\u5f15\u5931\u8d25\uff0c\u8bf7\u68c0\u67e5\u5220\u9664\u7684\u6570\u636e"),
+    NPDEFINITION_EXCEPTION_244("244", "\u67e5\u8be2\u7d22\u5f15\u5931\u8d25"),
+    NPDEFINITION_DEPLOY_EXCEPTION_001("DEPLPY_001", "\u53d1\u5e03\u5f02\u5e38\uff1a\u8bbe\u8ba1\u671f\u5b58\u50a8\u8868\u5185\u4e0d\u5305\u542b\u6307\u6807"),
+    NPDEFINITION_DEPLOY_EXCEPTION_002("DEPLPY_002", "\u53d1\u5e03\u5f02\u5e38\uff1a\u8fd0\u884c\u671f\u5b58\u50a8\u8868\u5185\u4e0d\u5305\u542b\u6307\u6807"),
+    NPDEFINITION_EXCEPTION_245("245", "\u6307\u6807\u67e5\u8be2\u5931\u8d25\uff01");
+
+    private String code;
+    private String message;
+
+    private NpDefinitionExceptionEnum(String code, String message) {
+        this.code = code;
+        this.message = message;
+    }
+
+    public String getCode() {
+        return this.code;
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+}
+

@@ -1,0 +1,18 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\np.definition-2.13.201.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.np.definition.common.SerializeUtils
+----------------------------
+
+serializeAndCompress(java.lang.Object )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+decompressAndDeserialize(byte[] java.lang.Class<T> )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+
+
+com.jiuqi.np.definition.internal.db.TransUtil
+----------------------------
+
+transClob(java.lang.Object )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once

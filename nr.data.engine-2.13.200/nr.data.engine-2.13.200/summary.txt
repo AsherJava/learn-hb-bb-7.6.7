@@ -1,0 +1,38 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.data.engine-2.13.200.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.data.engine.grouping.GroupingQueryImpl
+----------------------------
+
+executeReader(com.jiuqi.np.dataengine.executors.ExecutorContext )
+  Loose catch block
+executeMultiGradeReader(com.jiuqi.np.dataengine.executors.ExecutorContext )
+  Loose catch block
+
+
+com.jiuqi.nr.data.engine.util.ReportExpressionEvalUtil
+----------------------------
+
+eval(com.jiuqi.np.dataengine.executors.ExecutorContext java.util.List<com.jiuqi.bi.syntax.ast.IASTNode> com.jiuqi.np.dataengine.common.DimensionValueSet )
+  Loose catch block
+
+
+com.jiuqi.nr.data.engine.gather.DataGatherImpl
+----------------------------
+
+doNodeGather(com.jiuqi.np.dataengine.executors.ExecutorContext com.jiuqi.nr.data.engine.gather.GatherSqlGenerater )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [0[TRYBLOCK]], but top level block is 22[WHILELOOP]
+executeNodeCheck(com.jiuqi.np.dataengine.executors.ExecutorContext java.lang.String )
+  Unable to fully structure code
+executeBatchNodeCheck(com.jiuqi.np.dataengine.executors.ExecutorContext java.util.List<java.lang.String> )
+  Unable to fully structure code
+
+
+com.jiuqi.nr.data.engine.gather.GatherSqlGenerater
+----------------------------
+
+getFixGroupKeyInfo(java.lang.String com.jiuqi.nr.data.engine.gather.GatherTableDefine java.util.List<com.jiuqi.nr.datascheme.api.DataField> java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+getGroupKeyInfo(java.lang.String com.jiuqi.nr.data.engine.gather.GatherTableDefine java.util.List<com.jiuqi.nr.datascheme.api.DataField> java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
