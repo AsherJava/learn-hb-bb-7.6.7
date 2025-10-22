@@ -1,0 +1,9 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.etl-2.14.1.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.etl.automation.DataTableAutomationType
+----------------------------
+
+handleParseData(com.jiuqi.nr.etl.automation.DataTableAutomationWriteContext )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once

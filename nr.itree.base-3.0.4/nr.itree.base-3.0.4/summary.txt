@@ -1,0 +1,20 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.itree.base-3.0.4.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.itreebase.cache.TreeCacheAreaOfDisk
+----------------------------
+
+serialize(T )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once
+deserialize(byte[] java.lang.Class<T> )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [0[TRYBLOCK]], but top level block is 1[TRYBLOCK]
+
+
+com.jiuqi.nr.itreebase.cache.TreeCacheAreaOfOSS
+----------------------------
+
+serialize(T )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 3 blocks at once
+deserialize(byte[] java.lang.Class<T> )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Tried to end blocks [0[TRYBLOCK]], but top level block is 1[TRYBLOCK]

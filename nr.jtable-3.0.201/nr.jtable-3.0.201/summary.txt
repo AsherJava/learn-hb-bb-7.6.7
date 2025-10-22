@@ -1,0 +1,16 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.jtable-3.0.201.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.jtable.service.impl.JtableParamServiceImpl
+----------------------------
+
+formfields(com.jiuqi.nr.jtable.params.input.FieldQueryInfo )
+  Unable to fully structure code
+
+
+com.jiuqi.nr.jtable.service.impl.JtableResourceServiceImpl
+----------------------------
+
+previewFile(java.lang.String java.lang.String javax.servlet.http.HttpServletResponse )
+  Unable to fully structure code

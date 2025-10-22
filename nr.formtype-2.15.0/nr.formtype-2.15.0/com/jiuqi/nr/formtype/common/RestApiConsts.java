@@ -1,0 +1,83 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.nr.formtype.common;
+
+public class RestApiConsts {
+    public static final String REST_PREFIX = "api/v1/formtype/";
+    public static final String REST_API_QUERY_TAGS = "\u62a5\u8868\u7c7b\u578b\u67e5\u8be2\u670d\u52a1";
+    public static final String REST_API_QUERY_FULL_TREE = "\u62a5\u8868\u7c7b\u578b\u6811\u5f62\u5b8c\u6574\u6811\u5f62\u67e5\u8be2\u4e0e\u5b9a\u4f4d";
+    public static final String REST_API_QUERY_FULL_TREE_URL = "query/full/tree/{onlyGroup}";
+    public static final String REST_API_QUERY_FULL_TREE_LOCAL_URL = "query/full/tree/{onlyGroup}/{localKey}";
+    public static final String REST_API_QUERY_ROOT_TREE = "\u62a5\u8868\u7c7b\u578b\u6811\u5f62\u67e5\u8be2\u6839\u76ee\u5f55\u4e0b\u6811\u5f62\u8282\u70b9";
+    public static final String REST_API_QUERY_ROOT_TREE_URL = "query/root/tree";
+    public static final String REST_API_QUERY_TREE = "\u62a5\u8868\u7c7b\u578b\u6811\u5f62\u67e5\u8be2\u5b50\u76ee\u5f55\u4e0b\u6811\u5f62\u8282\u70b9";
+    public static final String REST_API_QUERY_TREE_URL = "query/tree/{groupKey}";
+    public static final String REST_API_QUERY_TREE_SEARCH = "\u62a5\u8868\u7c7b\u578b\u6811\u5f62\u67e5\u8be2";
+    public static final String REST_API_QUERY_TREE_SEARCH_URL = "query/tree/search";
+    public static final String REST_API_QUERY_TREE_LOCAL = "\u62a5\u8868\u7c7b\u578b\u6811\u5f62\u5b9a\u4f4d";
+    public static final String REST_API_QUERY_TREE_LOCAL_URL = "query/tree/local/{onlyGroup}";
+    public static final String REST_API_QUERY_GROUP = "\u67e5\u8be2\u5206\u7ec4\u8be6\u7ec6\u4fe1\u606f";
+    public static final String REST_API_QUERY_GROUP_URL = "query/group/{groupKey}";
+    public static final String REST_API_QUERY_FORMTYPE = "\u67e5\u8be2\u62a5\u8868\u7c7b\u578b\u8be6\u7ec6\u4fe1\u606f";
+    public static final String REST_API_QUERY_FORMTYPE_URL = "query/formtype/{formTypeKey}";
+    public static final String REST_API_QUERY_DATA = "\u67e5\u8be2\u62a5\u8868\u7c7b\u578b\u6570\u636e\u9879\u8be6\u7ec6\u4fe1\u606f";
+    public static final String REST_API_QUERY_DATA_URL = "query/data/{dataKey}";
+    public static final String REST_API_QUERY_DATAS = "\u67e5\u8be2\u62a5\u8868\u7c7b\u578b\u6570\u636e\u9879\u5217\u8868";
+    public static final String REST_API_QUERY_DATAS_URL = "query/datas/{formTypeCode}";
+    public static final String REST_API_QUERY_DATAS_BYUN_URL = "query/datas/{formTypeCode}/{unitNature}";
+    public static final String REST_API_QUERY_UNIT_NATURE = "\u67e5\u8be2\u5355\u4f4d\u6027\u8d28";
+    public static final String REST_API_QUERY_UNIT_NATURE_URL = "query/nature";
+    public static final String REST_API_CHECK_FORMTYPE_CODE = "\u68c0\u67e5\u62a5\u8868\u7c7b\u578b\u6807\u8bc6\u662f\u5426\u5b58\u5728";
+    public static final String REST_API_CHECK_FORMTYPE_CODE_URL = "check/formtype/code/{formTypeCode}";
+    public static final String REST_API_CHECK_DATA_CODE = "\u68c0\u67e5\u62a5\u8868\u7c7b\u578b\u6570\u636e\u9879\u6807\u8bc6\u662f\u5426\u5b58\u5728";
+    public static final String REST_API_CHECK_DATA_CODE_URL = "check/data/code/{formTypeCode}/{dataCode}";
+    public static final String REST_API_CHECK_RELATED = "\u68c0\u67e5\u62a5\u8868\u7c7b\u578b\u662f\u5426\u88ab\u5f15\u7528\u4e86";
+    public static final String REST_API_CHECK_RELATED_URL = "check/formtype/related/{formTypeCode}";
+    public static final String REST_API_EDIT_TAGS = "\u62a5\u8868\u7c7b\u578b\u7f16\u8f91\u670d\u52a1";
+    public static final String REST_API_EDIT_GROUP_ADD = "\u65b0\u589e\u62a5\u8868\u7c7b\u578b\u5206\u7ec4";
+    public static final String REST_API_EDIT_GROUP_ADD_URL = "add/group";
+    public static final String REST_API_EDIT_GROUP_UPDATE = "\u66f4\u65b0\u62a5\u8868\u7c7b\u578b\u5206\u7ec4";
+    public static final String REST_API_EDIT_GROUP_UPDATE_URL = "update/group";
+    public static final String REST_API_EDIT_GROUP_DELETE = "\u5220\u9664\u62a5\u8868\u7c7b\u578b\u5206\u7ec4";
+    public static final String REST_API_EDIT_GROUP_DELETE_URL = "delete/group/{groupKey}";
+    public static final String REST_API_EDIT_FORMTYPE_ADD = "\u65b0\u589e\u62a5\u8868\u7c7b\u578b";
+    public static final String REST_API_EDIT_FORMTYPE_ADD_URL = "add/formtype";
+    public static final String REST_API_EDIT_FORMTYPE_UPDATE = "\u66f4\u65b0\u62a5\u8868\u7c7b\u578b";
+    public static final String REST_API_EDIT_FORMTYPE_UPDATE_URL = "update/formtype";
+    public static final String REST_API_EDIT_FORMTYPE_DELETE = "\u5220\u9664\u62a5\u8868\u7c7b\u578b";
+    public static final String REST_API_EDIT_FORMTYPE_DELETE_URL = "delete/formtype";
+    public static final String REST_API_EDIT_DATA_ADD = "\u65b0\u589e\u62a5\u8868\u7c7b\u578b\u6570\u636e\u9879";
+    public static final String REST_API_EDIT_DATA_ADD_URL = "add/data";
+    public static final String REST_API_EDIT_DATA_UPDATE = "\u66f4\u65b0\u62a5\u8868\u7c7b\u578b\u6570\u636e\u9879";
+    public static final String REST_API_EDIT_DATA_UPDATE_URL = "update/data";
+    public static final String REST_API_EDIT_DATA_DELETE = "\u5220\u9664\u62a5\u8868\u7c7b\u578b\u6570\u636e\u9879";
+    public static final String REST_API_EDIT_DATA_DELETE_URL = "delete/datas";
+    public static final String REST_API_EDIT_GROUP_EXCHANGE = "\u5206\u7ec4\u4ea4\u6362\u4f4d\u7f6e";
+    public static final String REST_API_EDIT_GROUP_EXCHANGE_URL = "exchange/group/{key}/{targetKey}";
+    public static final String REST_API_EDIT_FORMTYPE_EXCHANGE = "\u5206\u7ec4\u4ea4\u6362\u4f4d\u7f6e";
+    public static final String REST_API_EDIT_FORMTYPE_EXCHANGE_URL = "exchange/formtype/{key}/{targetKey}";
+    public static final String REST_API_EDIT_DATA_MOVEUP = "\u6570\u636e\u9879\u4e0a\u79fb";
+    public static final String REST_API_EDIT_DATA_MOVEUP_URL = "data/moveup/{formTypeCode}/{key}";
+    public static final String REST_API_EDIT_DATA_MOVEDOWN = "\u6570\u636e\u9879\u4e0b\u79fb";
+    public static final String REST_API_EDIT_DATA_MOVEDOWN_URL = "data/movedown/{formTypeCode}/{key}";
+    public static final String REST_API_ICON_TAGS = "\u62a5\u8868\u7c7b\u578b\u56fe\u6807\u83b7\u53d6\u670d\u52a1";
+    public static final String REST_API_ICON_GET = "\u83b7\u53d6\u56fe\u6807";
+    public static final String REST_API_ICON_GET_URL = "icon/{formTypeCode}/{dataCode}";
+    public static final String REST_API_ICON_GETALL_URL = "icon/{formTypeCode}";
+    public static final String REST_API_ICON_GETALL_BY_SCHEME_URL = "icon/scheme/{schemeKey}";
+    public static final String REST_API_APPLAY_TAGS = "\u62a5\u8868\u7c7b\u578b\u7ec4\u7ec7\u673a\u6784\u6269\u5c55\u670d\u52a1";
+    public static final String REST_API_APPLAY_ORG_CHECK_ZBCODE = "\u7ec4\u7ec7\u673a\u6784\u68c0\u67e5\u6807\u8bc6\u662f\u5426\u91cd\u590d";
+    public static final String REST_API_APPLAY_ORG_CHECK_ZBCODE_URL = "apply/org/check/{orgName}/{zbcode}";
+    public static final String REST_API_APPLAY_GET_ZB = "\u7ec4\u7ec7\u673a\u6784\u67e5\u8be2\u62a5\u8868\u7c7b\u578b\u5b57\u6bb5";
+    public static final String REST_API_APPLAY_GET_ZB_URL = "apply/get/zb/{orgName}";
+    public static final String REST_API_APPLAY_ADD_ZB = "\u65b0\u589e\u62a5\u8868\u7c7b\u578b\u5b57\u6bb5";
+    public static final String REST_API_APPLAY_ADD_ZB_URL = "apply/add/zb";
+    public static final String REST_API_APPLAY_UPDATE_ZB = "\u66f4\u65b0\u62a5\u8868\u7c7b\u578b\u5b57\u6bb5";
+    public static final String REST_API_APPLAY_UPDATE_ZB_URL = "apply/update/zb";
+    public static final String REST_API_APPLAY_DELETE_ZB = "\u5220\u9664\u62a5\u8868\u7c7b\u578b\u5b57\u6bb5";
+    public static final String REST_API_APPLAY_DELETE_ZB_URL = "apply/delete/zb";
+    public static final String REST_API_APPLAY_ENABLE_NRFT = "\u662f\u5426\u542f\u7528\u56fd\u8d44\u59d4\u6a21\u5f0f";
+    public static final String REST_API_APPLAY_ENABLE_NRFT_URL = "apply/enable/formtype";
+}
+

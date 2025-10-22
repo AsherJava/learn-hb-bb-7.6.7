@@ -1,0 +1,9 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr.midstore.core-3.0.200.jar
+Decompiled with CFR 0.152
+
+
+nr.midstore.core.definition.db.TransUtil
+----------------------------
+
+transClob(java.lang.Object )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Started 2 blocks at once

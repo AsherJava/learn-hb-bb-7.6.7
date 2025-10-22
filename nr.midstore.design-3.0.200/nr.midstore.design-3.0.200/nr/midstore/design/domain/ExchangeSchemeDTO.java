@@ -1,0 +1,142 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  com.jiuqi.nr.common.params.DimensionValue
+ *  nr.midstore.core.definition.common.ExchangeModeType
+ *  nr.midstore.core.definition.common.StorageModeType
+ */
+package nr.midstore.design.domain;
+
+import com.jiuqi.nr.common.params.DimensionValue;
+import java.util.HashMap;
+import java.util.Map;
+import nr.midstore.core.definition.common.ExchangeModeType;
+import nr.midstore.core.definition.common.StorageModeType;
+import nr.midstore.design.domain.SchemeBaseDTO;
+
+public class ExchangeSchemeDTO
+extends SchemeBaseDTO {
+    protected String desc;
+    private ExchangeModeType exchangeMode;
+    private StorageModeType storageMode;
+    private String storageInfo;
+    private String dataBaseLink;
+    private String tablePrefix;
+    private String taskKey;
+    private String groupKey;
+    private String configKey;
+    private String sceneCode;
+    private Map<String, DimensionValue> dimensionSet = new HashMap<String, DimensionValue>();
+
+    @Override
+    public String getCode() {
+        return this.code;
+    }
+
+    @Override
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    @Override
+    public String getTitle() {
+        return this.title;
+    }
+
+    @Override
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDesc() {
+        return this.desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+
+    public ExchangeModeType getExchangeMode() {
+        return this.exchangeMode;
+    }
+
+    public void setExchangeMode(ExchangeModeType exchangeMode) {
+        this.exchangeMode = exchangeMode;
+    }
+
+    public StorageModeType getStorageMode() {
+        return this.storageMode;
+    }
+
+    public void setStorageMode(StorageModeType storageMode) {
+        this.storageMode = storageMode;
+    }
+
+    public String getStorageInfo() {
+        return this.storageInfo;
+    }
+
+    public void setStorageInfo(String storageInfo) {
+        this.storageInfo = storageInfo;
+    }
+
+    public String getDataBaseLink() {
+        return this.dataBaseLink;
+    }
+
+    public void setDataBaseLink(String dataBaseLink) {
+        this.dataBaseLink = dataBaseLink;
+    }
+
+    public String getTablePrefix() {
+        return this.tablePrefix;
+    }
+
+    public void setTablePrefix(String tablePrefix) {
+        this.tablePrefix = tablePrefix;
+    }
+
+    public String getTaskKey() {
+        return this.taskKey;
+    }
+
+    public void setTaskKey(String taskKey) {
+        this.taskKey = taskKey;
+    }
+
+    @Override
+    public String getGroupKey() {
+        return this.groupKey;
+    }
+
+    @Override
+    public void setGroupKey(String groupKey) {
+        this.groupKey = groupKey;
+    }
+
+    public String getConfigKey() {
+        return this.configKey;
+    }
+
+    public void setConfigKey(String configKey) {
+        this.configKey = configKey;
+    }
+
+    public Map<String, DimensionValue> getDimensionSet() {
+        return this.dimensionSet;
+    }
+
+    public void setDimensionSet(Map<String, DimensionValue> dimensionSet) {
+        this.dimensionSet = dimensionSet;
+    }
+
+    public String getSceneCode() {
+        return this.sceneCode;
+    }
+
+    public void setSceneCode(String sceneCode) {
+        this.sceneCode = sceneCode;
+    }
+}
+
