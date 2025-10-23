@@ -1,0 +1,22 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.nr.workflow2.engine.core.exception;
+
+public enum ErrorCode {
+    UNKNOW,
+    PROCESSENGINE_NOT_FOUND,
+    PROCESSDEFINITION_NOT_FOUND,
+    USERTASK_NOT_FOUND,
+    USERACTION_NOT_FOUND,
+    STATUS_NOT_FOUND,
+    BUSINESSKEY_DUPLICATE,
+    INSTANCE_NOT_FOUND,
+    TASK_NOT_FOUND,
+    UNAUTHORIZED,
+    CONCURRENT_OPERATION,
+    DEPENDDENCY_BLOCKING,
+    CANCELD;
+
+}
+

@@ -1,0 +1,85 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package com.jiuqi.nr.formula.common;
+
+public class RestConst {
+    public static final String FORMULA_ROOT_API_TITLE = "\u4efb\u52a1\u8bbe\u8ba12.0\u516c\u5f0f\u7ba1\u7406";
+    public static final String FORMULA_ROOT_API_URL = "api/v2/nr-formula/";
+    public static final String SCHEME_ROOT_API_TITLE = "\u4efb\u52a1\u8bbe\u8ba12.0\u516c\u5f0f\u65b9\u6848\u7ba1\u7406";
+    public static final String SCHEME_ROOT_API_URL = "api/v2/nr-formula/scheme/";
+    public static final String FORMULA_INIT_ENV_URL = "init/env/{taskKey}";
+    public static final String FORMULA_TREE_URL = "tree/init/{key}";
+    public static final String FORMULA_TREE_LOCATE_URL = "tree/locate";
+    public static final String FORMULA_DATA_LIST = "\u5168\u90e8\u516c\u5f0f\u754c\u9762\u67e5\u8be2\u516c\u5f0f";
+    public static final String FORMULA_DATA_LIST_URL = "formula/data/list";
+    public static final String FORMULA_DATA_QUERY = "\u5168\u90e8\u516c\u5f0f\u754c\u9762\u67e5\u8be2\u516c\u5f0f";
+    public static final String FORMULA_DATA_QUERY_URL = "formula/data/query";
+    public static final String FORMULA_DATA_MOVE = "\u5168\u90e8\u516c\u5f0f\u754c\u9762\u67e5\u8be2\u516c\u5f0f";
+    public static final String FORMULA_DATA_MOVE_URL = "formula/data/move";
+    public static final String FORMULA_DATA_LIST_SEARCH = "\u5168\u90e8\u516c\u5f0f\u754c\u9762\u6309\u6761\u4ef6\u67e5\u8be2\u516c\u5f0f";
+    public static final String FORMULA_DATA_LIST_SEARCH_URL = "formula/data/search";
+    public static final String FORMULA_DATA_SAVE = "\u4fdd\u5b58\u516c\u5f0f";
+    public static final String FORMULA_DATA_SAVE_URL = "formula/data/save";
+    public static final String ROOT_VARIABLE_TITLE = "\u516c\u5f0f\u53d8\u91cf2.0";
+    public static final String ROOT_FORMULA_SCHEME_TITLE = "\u516c\u5f0f\u65b9\u68482.0";
+    public static final String FORMULA_VARIABLE_LIST_URL = "formula-variable/list/{formSchemeKey}";
+    public static final String FORMULA_VARIABLE_SAVE_URL = "formula-variable/save";
+    public static final String FORMULA_VARIABLE_ADD_URL = "formula-variable/add";
+    public static final String FORMULA_VARIABLE_UPDATE_URL = "formula-variable/update";
+    public static final String FORMULA_VARIABLE_DEL_URL = "formula-variable/delete/{varKey}";
+    public static final String FORMULA_VARIABLE_CODE_CHECK_URL = "formula-variable/check";
+    public static final String FORMULA_PUBLISH = "formula/publish";
+    public static final String FORMULA_SCHEME_PUBLISH = "/publish/{key}";
+    public static final String FORMULA_SCHEME_ADD = "/add";
+    public static final String FORMULA_SCHEME_GET = "/get/{formulaSchemeKey}";
+    public static final String FORMULA_SCHEME_LIST = "formula-scheme/list";
+    public static final String FORMULA_SCHEME_UPDATE = "/update";
+    public static final String FORMULA_SCHEME_DELETE = "/delete/{formulaSchemeKey}";
+    public static final String FORMULA_SCHEME_COPY = "/copy";
+    public static final String FORMULA_SCHEME_DEFAULT = "/default/{formulaSchemeKey}";
+    public static final String FORMULA_PRIVATE_TITLE = "\u79c1\u6709\u516c\u5f0f2.0";
+    public static final String FORMULA_PRIVATE_DATA_GET = "formula/private/get";
+    public static final String FORMULA_CHECK = "formula/check";
+    public static final String FORMULA_CHECK_BY_FORMSCHEME = "formula/check/{formScheme}";
+    public static final String EXPRESSION_CHECK = "expression/check";
+    public static final String CONDITION_STYLE_CHECK = "conditionStyle/check/{formScheme}";
+    public static final String FORMULA_PRIVATE_CHECK = "formula/private/check";
+    public static final String FORMULA_PARAM_INIT1 = "formula/init-param/get/{formKey}";
+    public static final String FORMULA_PARAM_INIT2 = "formula/init-param/get";
+    public static final String FORMULA_DES_CREATE = "formula/des/create";
+    public static final String FORMULA_DATA_EXPORT = "formula/data/export";
+    public static final String FORMULA_DATA_ALL_EXPORT = "formula/data/all-export";
+    public static final String FORMULA_DATA_IMPORT = "formula/data/import";
+    public static final String FORMULA_DATA_EXE_IMPORT = "formula/data/exe-import";
+    public static final String FORMULA_DATA_DELETE_IMPORT = "formula/data/delete-import";
+    public static final String FORMULA_DATA_DOWNLOAD_ERROR = "formula/data/download-error";
+    public static final String FORMULA_DESCRIPTION = "formula/description";
+    public static final String FORMULA_SEARCH = "formula/search";
+    public static final String FORMULA_CODE_GET = "formula/code/get/{formKey}";
+    public static final String SCHEME_INSTANCE = "default/insert";
+    public static final String FORMULA_CYCLE_CHECK_URL = "cycle/check";
+    public static final String FORMULA_CYCLE_CHECK = "\u5faa\u73af\u516c\u5f0f\u68c0\u6d4b";
+    public static final String FORMULA_CYCLE_EXPORT = "cycle/export";
+    public static final String FORMULA_CONDITION_TITLE = "\u516c\u5f0f\u9002\u7528\u6761\u4ef6";
+    public static final String FORMULA_CONDITION_QUERY = "\u516c\u5f0f\u9002\u7528\u6761\u4ef6\u67e5\u8be2";
+    public static final String FORMULA_CONDITION_QUERY_URL = "condition/query";
+    public static final String FORMULA_CONDITION_CODE_QUERY = "\u516c\u5f0f\u9002\u7528\u6761\u4ef6\u67e5\u8be2CODE";
+    public static final String FORMULA_CONDITION_CODE_QUERY_URL = "condition/code/query";
+    public static final String PRIVATE_UNIT_INIT = "unit/tree/init";
+    public static final String PRIVATE_UNIT_LOAD_CHILDREN = "unit/tree/children";
+    public static final String PRIVATE_LIST = "data/list";
+    public static final String PRIVATE_QUERY = "data/query";
+    public static final String PRIVATE_MOVE = "data/move";
+    public static final String PRIVATE_SAVE_URL = "data/save";
+    public static final String PRIVATE_SAVE = "\u4fdd\u5b58\u79c1\u6709\u516c\u5f0f";
+    public static final String PRIVATE_CHECK_URL = "data/check";
+    public static final String PRIVATE_CHECK = "\u68c0\u67e5\u79c1\u6709\u516c\u5f0f";
+    public static final String PRIVATE_EXPORT_URL = "data/export";
+    public static final String PRIVATE_EXPORT = "\u68c0\u67e5\u79c1\u6709\u516c\u5f0f";
+    public static final String PRIVATE_EXPORT_ALL_URL = "data/exportAll";
+    public static final String PRIVATE_EXPORT_ALL = "\u68c0\u67e5\u79c1\u6709\u516c\u5f0f";
+    public static final String PRIVATE_IMPORT_URL = "data/import";
+    public static final String PRIVATE_IMPORT = "\u68c0\u67e5\u79c1\u6709\u516c\u5f0f";
+}
+

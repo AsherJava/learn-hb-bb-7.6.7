@@ -1,0 +1,11 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr-workflow2-engine-default-1.2.0.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.workflow2.engine.dflt.process.runtime.DefaultProcessRuntimeService
+----------------------------
+
+batchCompleteTask(com.jiuqi.nr.workflow2.engine.core.process.runtime.IBusinessKeyCollection java.lang.String java.lang.String com.jiuqi.nr.workflow2.engine.core.actor.IActor com.jiuqi.nr.workflow2.engine.core.process.runtime.IActionArgs com.jiuqi.nr.workflow2.engine.core.process.runtime.IBusinessKeyDependencies com.jiuqi.bi.monitor.IProgressMonitor )
+  Exception : org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter$TooOptimisticMatchException
+queryCanCompleteInstance(com.jiuqi.nr.workflow2.engine.core.process.runtime.IBusinessKeyCollection java.lang.String java.lang.String com.jiuqi.nr.workflow2.engine.core.actor.IActor com.jiuqi.nr.workflow2.engine.core.process.runtime.IActionArgs )
+  Exception : org.benf.cfr.reader.bytecode.analysis.opgraph.op4rewriters.SwitchStringRewriter$TooOptimisticMatchException

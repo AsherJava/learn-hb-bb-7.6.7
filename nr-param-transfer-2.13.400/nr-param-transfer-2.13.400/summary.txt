@@ -1,0 +1,10 @@
+Summary for E:\久其办公\临时文件\gc\源码学习\outlib\nr-param-transfer-2.13.400.jar
+Decompiled with CFR 0.152
+
+
+com.jiuqi.nr.param.transfer.definition.DefinitionModelTransfer
+----------------------------
+
+importFormulaFormBusinessObj(com.jiuqi.bi.transfer.engine.intf.IImportContext java.lang.String com.jiuqi.nr.param.transfer.definition.dto.formula.FormulaSchemeDTO boolean )
+  Unable to fully structure code
+  Could not resolve type clashes
